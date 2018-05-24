@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="navigationBar">
+        <div class="logoBox">
+            <h1 class="logoBox-header">TES<span>T</span>UNE</h1>
+        </div>
+        <div class="menu-wrapper">
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="button-wrapper">
+                <a href="exam_history.php" class="nav-links">
+                    <i class="fas fa-angle-right"></i> Exam Results</a>
+                <a href="customer_support.php" class="nav-links">
+                    <i class="fas fa-angle-right"></i> Customer Support</a>
+                <a href="change_password.php" class="nav-links">
+                    <i class="fas fa-angle-right"></i> Change Password</a>
+                <a href="?q=logout" class="nav-links">
+                    <i class="fas fa-angle-right"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="student-dashboard">
+        <div class="dashboard-content">
+            <h1>DASHBOARD</h1>
+        </div>
+    </div>
+    <div class="header-main">
+        <div class="container">
+            <h1>Overall Progress</h1>
+        </div>
+    </div>
+    <ul class="subject-list">
+        <div class="container subject-list">
+            <li>Subjects</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a onclick="get_test('SB_1220_C1_12_Phy_1','Physics')" id="subject2">Physics</a>
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a onclick="get_test('SB_1220_C1_12_Che_0','Chemistry')" id="subject1">Chemistry</a>
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a onclick="get_test('SB_1220_C1_12_Mat_2','Mathematics')" id="subject3">Mathematics</a>
+            </li>
+        </div>
+    </ul>
+    <div class="header-main-second">
+        <div class="container">
+            <h1>PHYSICS</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="topicName">
+                    <h1>ALDEHYDES KETONES AND CARBOXYLIC ACIDS</h1>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <div class="topicAttempted">
+                    <h1>Attempted</h1>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                <div class="performance">
+                    <h1>View Result</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+        </div>
+    </div>
+    <script language='javascript'>
+        function test_instruction(p) {
+            $('#test_link').attr('href', 'test_instruction.php?test_id=' + p);
+            $('#test_link').trigger('click');
+        }
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <script language='javascript'>
+        $(function () {
+            $("#password").keyup(function (event) {
+                if (event.keyCode == 13) {
+                    login();
+                }
+            });
+        });
+
+        $('#subject1').trigger('click');
+
+        function get_test(p, q) {
+            $('#subject_selected').html(q);
+            $.ajax({
+                type: 'POST',
+                url: 'get_test_papers.php?subject_id=' + p,
+                data: '',
+                beforeSend: function () {},
+                success: function (response) {
+                    $('#test_record').html(response);
+                }
+            });
+        }
+
+        function login() {
+            var user = $.trim($('#username').val());
+            var pass = $.trim($('#password').val());
+            if (user == '' || pass == '') {
+                alert('Please enter the username & password');
+            } else {
+                // alert(user+pass);
+                $.ajax({
+                    type: 'POST',
+                    url: '../Home/login_check.php',
+                    data: {
+                        username: user,
+                        password: pass,
+                        logintype: 'institute'
+                    },
+                    beforeSend: function () {},
+                    success: function (response) {
+                        if (response == 'institute') {
+                            parent.window.location = "inst_dashboard.php";
+                        } else {
+                            alert("Incorrect username & password");
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+</body>
+</html>

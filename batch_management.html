@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="navigationBar">
+        <div class="logoBox">
+            <h1 class="logoBox-header">TES
+                <span>T</span>UNE</h1>
+        </div>
+        <div class="menu-wrapper">
+            <h1>Menu</h1>
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="button-wrapper">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="middleWrapper_Academic">
+        <div class="academic_header">
+            <h1 class="academic_header-text">Batch Management</h1>
+            <a href="#" class="academic_header_link">ADD DELETE MODIFY BATCHES AND COURSES</a>
+            <form action="#" method="post">
+                <select name="" class="academic_course">
+                    <option value="cbse">Session 2017-18</option>
+                    <option value="icse">Test</option>
+                    <option value="jee">Test</option>
+                    <option value="neet">NEET</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div style="overflow-x:auto;overflow-y:auto">
+            <table class="table table-hover academic_table table-bordered">
+                <thead class="thead-dark academic-table-header">
+                    <tr>
+                        <th scope="col">CLASS/LEVEL
+                            <a href="add_class.php" class="pop">
+                                <span style="float: right;font-size: 10px;text-align: center;margin:0;">+
+                                    <br>ADD
+                                </span>
+                            </a>
+                        </th>
+                        <th scope="col">BATCH
+                            <a href="add_class.php" class="pop">
+                                <span style="float: right;font-size: 10px;text-align: center;margin:0;">+
+                                    <br>ADD
+                                </span>
+                            </a>
+                        </th>
+                        <th scope="col">BATCH DETAILS
+                            <a href="add_class.php" class="pop">
+                                <span style="float: right;font-size: 10px;text-align: center;margin:0;">+
+                                    <br>ADD
+                                </span>
+                            </a>
+                        </th>
+                        <th scope="col">DETAILS
+                            <a href="add_class.php" class="pop">
+                                <span style="float: right;font-size: 10px;text-align: center;margin:0;">+
+                                    <br>ADD
+                                </span>
+                            </a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Class 1</td>
+                        <td>Subject 1</td>
+                        <td>Topic 1</td>
+                        <td>Sub Topic 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>

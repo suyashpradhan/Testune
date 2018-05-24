@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/main.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      margin: 5px 0;
+    }
+
+    .main-Label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+      font-size: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 20%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: right;
+      width: 80%;
+      margin-top: 6px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="mainDiv">
+      <form action="" class="mainDiv">
+        <div class="row">
+          <div class="col-25">
+            <label for="country" class="main-Label">Query Related To</label>
+          </div>
+          <div class="col-75">
+            <select id="" name="query_select">
+              <option value="australia">General</option>
+              <option value="canada">Technical</option>
+              <option value="usa">Billing/Finance</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject" class="main-Label">Subject</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="" name="Subject">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="query_description" class="main-Label">Query Description</label>
+          </div>
+          <div class="col-75">
+            <textarea id="" name="query_description" style="height:100px">
+
+            </textarea>
+          </div>
+        </div>
+        <div class="customer-button-wrapper">
+          <button class="customer-button" id="">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
