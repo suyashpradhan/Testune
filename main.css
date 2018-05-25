@@ -99,7 +99,7 @@ body {
     margin: 50px 0;
 }
 
-.nav-links{
+.nav-links {
     font-size: 20px;
 }
 
@@ -911,10 +911,8 @@ body {
     background-color: #00695C;
     height: 400px;
     width: auto;
-<<<<<<< HEAD
-=======
-    margin-bottom: 50px;
->>>>>>> b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
+    <<<<<<< HEAD=======margin-bottom: 50px;
+    >>>>>>>b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
 }
 
 .dashboard-content {
@@ -940,12 +938,9 @@ body {
 }
 
 .header-main {
-<<<<<<< HEAD
-    background-color: #5DA7AE;
-=======
-    /* background-color: #5da7ae; */
->>>>>>> b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
-    height: 60px;
+    <<<<<<< HEAD background-color: #5DA7AE;
+    =======/* background-color: #5da7ae; */
+    >>>>>>>b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1 height: 60px;
     color: #000;
     padding-left: 15px;
     padding-top: 5px;
@@ -956,14 +951,11 @@ body {
 }
 
 .topicName h1 {
-<<<<<<< HEAD
-    font-size: 20px;
+    <<<<<<< HEAD font-size: 20px;
     margin: 5px 0 5px 10px;
-=======
-    font-size: 18px;
+    =======font-size: 18px;
     margin: 5px 0 5px 20px;
->>>>>>> b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
-    color: #777;
+    >>>>>>>b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1 color: #777;
     letter-spacing: 2px;
 }
 
@@ -1127,11 +1119,13 @@ body {
     text-align: center;
 }
 
-/* select {
+/* /* select {
     /* for Firefox */
-    -moz-appearance: none;
-    /* for Chrome */
-    -webkit-appearance: none;
+
+-moz-appearance: none;
+/* for Chrome */
+
+-webkit-appearance: none;
 }
 
 /* For IE10 */
@@ -1139,7 +1133,7 @@ body {
 select::-ms-expand {
     display: none;
 }
- */
+
 @media screen and (max-width:600px) and (min-width:10px) {
     .academic_list {
         display: flex;
@@ -1326,15 +1320,8 @@ select::-ms-expand {
 
 .footer {
     background-color: #1E252B;
-<<<<<<< HEAD
     height: 100px;
-    position: absolute;
-=======
-    height: 120px;
-    position: fixed;
-    left: 0;
->>>>>>> b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
-    bottom: 0;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -1602,7 +1589,7 @@ select::-ms-expand {
     border: 1px solid #EF5E4A;
 }
 
-.login-avatar{
+.login-avatar {
     height: 80px;
     border-radius: 100px;
     border: 1px solid #000;
@@ -1621,14 +1608,12 @@ select::-ms-expand {
     ._password {
         width: 200px;
         margin-right: 50px;
-        
     }
     ._loginButton {
         width: 200px;
         margin-right: 50px;
-        
     }
-   /*  ._forgot {
+    /*  ._forgot {
         margin-right: 20px;
     }
     ._loginButtonCreator {
@@ -1641,13 +1626,12 @@ select::-ms-expand {
         margin-right: 20px;
         font-size: 14px;
     } */
-
-    .login-avatar{
+    .login-avatar {
         margin-right: 50px;
     }
 }
 
-@media screen and (max-width:600px) and (min-width:350px){
+@media screen and (max-width:600px) and (min-width:350px) {
     .institute-login-wrapper h1 {
         margin-right: 40px;
         font-size: 24px;
@@ -1667,7 +1651,7 @@ select::-ms-expand {
         margin-right: 40px;
         margin-left: 30px;
     }
-   /*  ._forgot {
+    /*  ._forgot {
         margin-right: 40px;
     }
     ._loginButtonCreator {
@@ -1680,16 +1664,12 @@ select::-ms-expand {
         margin-right: 40px;
         font-size: 14px;
     } */
-
-    .login-avatar{
+    .login-avatar {
         margin-right: 0px;
         margin-left: 30px;
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
 /*********INDEX PAGE CSS*********/
 
 .main-page-header {
@@ -1947,95 +1927,93 @@ select::-ms-expand {
     box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
 
-<<<<<<< HEAD
 .demo_table tr td {
     width: 100%;
 }
 
 /**********CUSTOMER SUPPORT PAGE********/
 
-.customer-header-wrapper{
+.customer-header-wrapper {
     background-color: #00695C;
-=======
+}
+
 .start-btn {
->>>>>>> b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-<<<<<<< HEAD
     height: 100px;
 }
 
-.customer-header-text{
+.customer-header-text {
     color: #fff;
 }
 
 input[type=text],
-    select,
-    textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-      margin: 5px 0;
-    }
-
-    .main-Label {
-      padding: 12px 12px 12px 0;
-      display: inline-block;
-      font-size: 20px;
-    }
-
-    .col-25 {
-      float: left;
-      width: 20%;
-      margin-top: 6px;
-    }
-
-    .col-75 {
-      float: right;
-      width: 80%;
-      margin-top: 6px;
-    }
-
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    @media screen and (max-width: 600px) {
-      .col-25,
-      .col-75,
-      input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-      }
-    }
-
-.customer-header-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 5px 0;
 }
 
-.customer-form-header{
+.main-Label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
     font-size: 20px;
 }
 
-.mainDiv{
-   margin: 75px auto;
+.col-25 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
 }
 
-.customer-button-wrapper{
+.col-75 {
+    float: right;
+    width: 80%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.customer-header-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.customer-button{
+.customer-form-header {
+    font-size: 20px;
+}
+
+.mainDiv {
+    margin: 75px auto;
+}
+
+.customer-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-button {
     background-color: #ED4933;
     width: 300px;
     padding: 8px 0;
@@ -2053,20 +2031,20 @@ input[type=text],
 
 /*CHANGE PASS WORD CSS*/
 
-.password-wrapper{
+.password-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
 }
 
-.password-text{
+.password-text {
     font-size: 28px;
     margin: 20px 0 0 0;
     text-align: justify;
 }
 
-.password-form{
+.password-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2076,7 +2054,7 @@ input[type=text],
     margin: 0 auto;
 }
 
-._oldpassword{
+._oldpassword {
     width: 400px;
     padding: 8px 0;
     text-align: center;
@@ -2085,7 +2063,7 @@ input[type=text],
     border-radius: 3px;
 }
 
-._newpassword{
+._newpassword {
     width: 400px;
     padding: 8px 0;
     text-align: center;
@@ -2094,7 +2072,7 @@ input[type=text],
     border-radius: 3px;
 }
 
-._confirmpassword{
+._confirmpassword {
     width: 400px;
     padding: 8px 0;
     text-align: center;
@@ -2103,7 +2081,7 @@ input[type=text],
     border-radius: 3px;
 }
 
-._resetPasswordButton{
+._resetPasswordButton {
     background-color: #ED4933;
     width: 400px;
     padding: 8px 0;
@@ -2121,32 +2099,31 @@ input[type=text],
 
 /************TEST HISTORY PAGE*************/
 
-.purchased-table-header{
+.purchased-table-header {
     font-size: 24px;
     margin: 30px 0 5px 0;
 }
 
-.enquiry{
+.enquiry {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
 }
 
-.enquiry h1{
+.enquiry h1 {
     font-size: 24px;
     margin: 30px 0 5px 0;
 }
 
-.customer-link{
+.customer-link {
     color: #ED4933;
 }
 
-.customer-link:hover{
+.customer-link:hover {
     text-transform: none;
     text-decoration: none;
     color: #000;
-=======
     padding: 10px 25px;
     font-size: 24px;
     width: 200px;
@@ -2158,17 +2135,17 @@ input[type=text],
     border: none;
     border-radius: 100px;
     box-shadow: 0 3px #000;
-    outline:none;
+    outline: none;
     margin-top: 30px;
 }
 
 .start-btn:hover {
     background-color: #EF5E4A;
     border: none;
-    outline:none
+    outline: none
 }
 
-.start-btn p{
+.start-btn p {
     color: #fff;
     font-size: 22px;
     text-transform: uppercase;
@@ -2179,16 +2156,173 @@ input[type=text],
     background-color: #EF5E4A;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-    outline:none
+    outline: none
 }
 
-.start-btn:clicked{
-    outline:none;
+.start-btn:clicked {
+    outline: none;
 }
 
 .start-btn-text {
     padding: 3px;
     margin: 0;
     color: #FFFFFF;
->>>>>>> b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
 }
+
+/******EDIT PROFILE CSS*******/
+
+.edit-form {
+    margin: 30px 0;
+}
+
+.edit-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demoField {
+    margin: 0;
+    padding: 0;
+}
+
+/******ASSIGN TEST******/
+
+.first_row {
+    margin: 30px 0;
+}
+
+.first_row_inner {
+    margin: 10px 0;
+}
+
+.text-batch-header {
+    font-size: 22px;
+    color: #00695C;
+    letter-spacing: 1px;
+}
+
+.text-batch-link {
+    width: 150px;
+    padding: 3px 6px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #00897B;
+    border: 1px solid #00897B;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.text-batch-header-sub {
+    font-size: 22px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.text-batch-header-second {
+    margin: 30px 0 15px 0;
+    font-size: 30px;
+    color: #1E252B;
+    text-align: center;
+}
+
+.test_input {
+    font-size: 20px;
+}
+
+.my-test-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 20px 0 40px 0;
+}
+
+._mytestBtn {
+    background-color: #ED4933;
+    width: 300px;
+    padding: 3px 3px;
+    text-align: center;
+    margin: 10px 0;
+    border: 1px solid #ED4933;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.batch-list {
+    margin: 15px 0;
+    padding: 10px 0;
+    width: 100%;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 100px;
+    border: 1px solid #000;
+}
+
+.submit-test-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._testSubmit {
+    background-color: #218838;
+    width: 500px;
+    padding: 5px 5px;
+    text-align: center;
+    margin: 10px 0;
+    border: 1px solid #218838;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+/*CREATOR PAGES*/
+
+.upload-btn{
+    margin-top: 30px;
+}
+
+.digitization-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.digit-header{
+    font-size: 24px;
+}
+
+._digitStart{
+    background-color: #218838;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #218838;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+
+/**************POP UP CSS***********/
+
+.

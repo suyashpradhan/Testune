@@ -1,5 +1,5 @@
 @import url("font-awesome.min.css");
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
+/* @import url("http://fonts.googleapis.com/css?family=Lato:300,400,900"); */
 /*
 	Twenty by HTML5 UP
 	html5up.net | @n33co
@@ -7,6 +7,16 @@
 */
 
 /* Reset */
+
+@font-face {
+    font-family: 'AbadiMTCondensed';
+    src: url("http://www.testune.com/institute/css/AbadiMTCondensed.ttf");
+}
+
+*{
+	font-family: "Abadi MT Condensed", serif;
+}
+
 
 html,
 body,
@@ -1667,7 +1677,7 @@ textarea {
 	text-decoration: none;
 	width: 100%;
 	outline: 0;
-	border: 1px solid black;
+	border: 1px solid #00897B;
 	font-size: 15px;
 	margin-top: 10px;
 }
@@ -3457,7 +3467,7 @@ select {
 	-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	-ms-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-	border: 1px solid black;
+	border: 1px solid #00897B;
 	display: block;
 	text-decoration: none;
 	width: 100%;
@@ -3469,7 +3479,7 @@ select {
 }
 
 select:focus {
-	border-color: #ffffff;
+	border-color: #00897B;
 }
 
 .timer {
@@ -4255,12 +4265,4 @@ input[type="reset"].special-grey,
 	margin-top: 0;
 	margin-bottom: 0;
 	vertical-align: middle;
-}
-
-.color {
-	color: cyan;
-}
-
-.mybutton {
-	background-color: #ed4933;
 }

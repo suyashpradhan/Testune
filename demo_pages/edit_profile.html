@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+    <div class="navigationBar">
+        <div class="logoBox">
+            <h1 class="logoBox-header">TES
+                <span>T</span>UNE</h1>
+        </div>
+        <div class="menu-wrapper">
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="button-wrapper">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="performance-header">
+        <h1 class="performance-header-text">EDIT PROFILE</h1>
+    </div>
+    <div class="container">
+        <form class="edit-form" action="#">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputF">First Name</label>
+                    <input type="email" class="form-control" id="inputF" placeholder="First Name" class="demoField">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputL">Last Name</label>
+                    <input type="password" class="form-control" id="inputL" placeholder="Last Name" class="demoField">
+                </div>
+                <div class="form-group col-md-6">
+                    <input id="date" type="date" value="2017-06-01">
+                </div>
+                <div class="form-group col-md-6">
+                    <input name="myFile" type="file">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputA">Address</label>
+                    <input type="email" class="form-control" id="inputA" placeholder="Address" class="demoField"> 
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputP">Pincode</label>
+                    <input type="text" class="form-control" id="inputP" placeholder="Pincode" class="demoField">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputN">Phone Number</label>
+                    <input type="email" class="form-control" id="" placeholder="Phone Number" class="demoField" >
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputN2">Phone Number 2</label>
+                    <input type="email" class="form-control" id="" placeholder="Phone Number 2" class="demoField">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="">Education Profile</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Eduaction Profile" class="demoField">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Years of Experience</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Years of Experience" class="demoField">
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Feedback</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Feedback" class="demoField">
+                </div>
+            </div>
+            <div class="edit-button-wrapper">
+                <button class="_resetPasswordButton">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+</html>
