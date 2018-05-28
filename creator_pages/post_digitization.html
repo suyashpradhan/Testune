@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="navigationBar">
+        <div class="logoBox">
+            <h1 class="logoBox-header">TES
+                <span>T</span>UNE</h1>
+        </div>
+        <div class="menu-wrapper">
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="button-wrapper">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="performance-header">
+        <h1 class="performance-header-text">Grading System</h1>
+    </div>
+    <div class="timeline-wrapper">
+        <h1>Time Section</h1>
+    </div>
+    <div class="container">
+        <div class="form-group-header">
+            <h1>Your Test Is Digitized</h1>
+            <a href="preview_question.php?id=1" class="view_check edit-link"> Click Here To Edit Your Question </a>
+        </div>
+
+        <form action="" class="mainDiv">
+            <div class="row">
+                <div class="col-25">
+                    <label for="country" class="main-Label">Question No 1</label>
+                </div>
+                <div class="col-75">
+                    <h1 style="background-color: #ccc;padding:5px;border-radius: 3px;font-size: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quos similique ratione rerum nam
+                        sunt ipsum expedita dignissimos quas voluptatum, praesentium optio vitae a quia voluptas, reiciendis
+                        neque suscipit sit.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">A</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam facere adipisci.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">B</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam facere adipisci.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">C</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam facere adipisci.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">D</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam facere adipisci.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">D</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam facere adipisci.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">Correct Answer</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">A</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">Correct Answer Mark</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">A</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">Wrong Answer Mark</label>
+                </div>
+                <div class="col-75">
+                    <h1 class="option-answer">A</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" class="main-Label">Solution</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="" name="query_description" style="height:100px">
+                    </textarea>
+                </div>
+            </div>
+            <div class="approve-button-wrapper">
+                    <button class="approve-button" id="">Approve</button>
+                </div>
+        </form>
+    </div>
+    <div class="center">
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a href="#" class="active">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+    <div class="footer">
+        <div class="footerInner">
+            <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>

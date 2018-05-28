@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Teacher Dashboard</title>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="..css/admin.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery.form.js"></script>
+    <script src="../js/jquery-2.1.0.js"></script>
+    <script src="../js/common-script.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/ajaxupload.3.5.js"></script>
+    <link href="../main.css" rel="stylesheet">
+    <link href="../fancybox/rupee.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <style type="text/css">
+        .circular {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: #999999 2px solid !important;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+        }
+
+        div#container {
+            width: 200px;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            background: #000;
+            border: 1px solid #1a1a1a;
+        }
+
+        /* HOVER STYLES */
+
+        div#pop-up {
+            display: none;
+            position: absolute;
+            width: 200px;
+            padding: 10px;
+            background: #eeeeee;
+            color: #000000;
+            border: 1px solid #BBBBBB;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            font-size: 90%;
+        }
+    </style>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Home/fancybox/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" type="text/css" href="../../Home/fancybox/jquery.fancybox-1.3.4.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.pop2").fancybox({
+                'overlayColor': '#000',
+                'overlayOpacity': 0.9
+            });
+            $("a.pop").fancybox({
+                'type': 'iframe',
+                'autoScale': true,
+                'autoDimensions': true,
+                'fitToView': true,
+            });
+            $("a.submit_verdict").fancybox({
+                'type': 'iframe',
+                'width': 550,
+                'height': 520,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_notification_message").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 600,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.message_display").fancybox({
+                'type': 'iframe',
+                'width': '300',
+                'height': '300',
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.teacher_login_form2").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 535,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.teacher_login_form").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 380,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_notification_message1").fancybox({
+                'type': 'iframe',
+                'width': 550,
+                'height': 600,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_check").fancybox({
+                'type': 'iframe',
+                'width': 1000,
+                'height': 700,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_check2").fancybox({
+                'type': 'iframe',
+                'width': 1000,
+                'height': 500,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+
+        });
+        $(document).ready(function () {
+            $('#login-trigger').click(function () {
+                $(this).next('#login-content').slideToggle();
+                $(this).toggleClass('active');
+                if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+                else $(this).find('span').html('&#x25BC;')
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        //window.history.forward(1);
+        //function noBack(){
+        //window.history.forward();
+        $('#user_image').hide();
+        $('#user_image').load(function () {
+            $('#user_image').show();
+        });
+    </script>
+</head>
+
+<body class="dark_theme" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+
+
+    <div class="navigationBar">
+        <div class="logoBox">
+            <a href="index.php">
+                <h1 class="logoBox-header">TES
+                    <span>T</span>UNE</h1>
+            </a>
+        </div>
+        <div class="menu-wrapper">
+            <!--  <h1>Menu</h1> -->
+            <i class="fas fa-bars" onClick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+
+            <a href="edit_profile.php">
+                <i class="fas fa-angle-right"></i>Personal Profile</a>
+            <a href="assign_test_batch.php">
+                <i class="fas fa-angle-right"></i>Assign Test</a>
+            <a href="change_password.php">
+                <i class="fas fa-angle-right"></i>Change Password</a>
+            <a href="?q=logout">
+                <i class="fas fa-angle-right"></i>Logout</a>
+
+        </div>
+    </div>
+
+    <script language='javascript'>
+        var parent_page_url = window.location.pathname;
+
+        function selected_exam() {
+            var exam = $('#exam').val();
+            window.location = parent_page_url + '?exam_name=' + exam;
+        }
+
+        function exam_id(p) {
+            $('#exam_name').html(p);
+            $.fancybox.close();
+            window.location.reload();
+        }
+    </script>
+    <script language='javascript'>
+        function moddetail(p) {
+            $(function () {
+                var moveLeft = 20;
+                var moveDown = 10;
+                $('a.trigger').hover(function (e) {
+                    $('div#pop-up').html(p);
+                    $('div#pop-up').show();
+                }, function () {
+                    $('div#pop-up').hide();
+                });
+                $('a.trigger').mousemove(function (e) {
+                    $("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+                });
+            });
+        }
+    </script>
+    <input type="hidden" id="qn_id" name="qn_id" value="Test_637_1">
+
+    <div class="performance-header">
+        <h1 class="performance-header-text">Digitized</h1>
+    </div>
+
+    <div class="inner">
+        <!--\\\\\\\ inner start \\\\\\-->
+        <!--\\\\\\\left_nav end \\\\\\-->
+        <div class="contentpanel">
+            <!--\\\\\\\ contentpanel start\\\\\\-->
+            <div class="login_page">
+                <div class="teacher_skeleton">
+                    <div class="row">
+                        <div class="col-md-12 border_bottom">
+                            <h3> Physics / Atoms</h3>
+                            <div class="multi-stat-box" style="padding-left:45px;">
+                                <div class="content">
+                                    <div class="progress-tracker" style="width:800px; padding-left:3px;">
+                                        <div class="circle done">
+                                            <span class="label">&nbsp;</span>
+                                        </div>
+                                        <span class="bar half" style="width:200px"></span>
+                                        <div class="circle done">
+                                            <span class="label">&nbsp;</span>
+                                        </div>
+                                        <span class="bar half" style="width:200px"></span>
+                                        <div class="circle active">
+                                            <span class="label">&nbsp;</span>
+                                        </div>
+                                        <span class="bar" style="width:200px"></span>
+                                        <div class="circle active">
+                                            <span class="label">&nbsp;</span>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-lebel" style="width:29.33%">
+                                        <strong class="green_text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload File</strong>
+                                    </div>
+                                    <div class="ticket-lebel" style="width:29.33%">
+                                        <strong class="green_text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Digitization</strong>
+                                    </div>
+                                    <div class="ticket-lebel" style="width:29.33%">
+                                        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grading</strong>
+                                    </div>
+                                    <div class="ticket-lebel" style="width:29.33%">
+                                        <strong>Send to Publish</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-web">
+                        <div class="porlets-content">
+                            <section class="panel default blue_title h2" style="background-color:#F1F1F1">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h5 class="content-header "> Preview. Your Test is Digitized!
+                                            <a href="preview_question.php?id=1" class="view_check">
+                                            Edit Question </a>
+                                        </h5>
+                                        <div class="panel-body">
+                                            <div class="form-horizontal row-border">
+
+                                                <div class="form-group">
+                                                    <div class="col-md-1"> 1. </div>
+                                                    <div class="col-md-11">
+                                                        <div class="row alert alert-danger" style="height:auto; overflow:auto; color:#666666;">
+                                                            <p>
+                                                                A</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/form-group-->
+
+                                                <div class="form-group">
+                                                    <div class="col-md-1"> A </div>
+                                                    <div class="col-md-11">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">
+                                                            <p>
+                                                                1</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-1"> B </div>
+                                                    <div class="col-md-11">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">
+                                                            <p>
+                                                                2</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-1"> C </div>
+                                                    <div class="col-md-11">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">
+                                                            <p>
+                                                                3</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-1"> D </div>
+                                                    <div class="col-md-11">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">
+                                                            <p>
+                                                                4</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <div class="col-md-6">
+                                                        <div class="alert" style="height:auto; overflow:auto; color:#666666;">
+                                                            <b>Correct Answer</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">A</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="col-md-6">
+                                                        <div class="alert" style="height:auto; overflow:auto; color:#666666;">
+                                                            <b>Correct Answer Mark</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">0.00</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="col-md-6">
+                                                        <div class="alert" style="height:auto; overflow:auto; color:#666666;">
+                                                            <b>Wrong Answer Mark</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">0.00</div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group" style="margin-bottom:0px;">
+                                                    <div class="col-md-6">
+                                                        <div class="alert" style="height:auto; overflow:auto; color:#666666;">
+                                                            <b>Solution</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="alert alert-danger fade in" style="height:auto; overflow:auto; color:#666666;">
+                                                            <p>
+                                                                A</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" style="margin-top:0px;">
+                                                    <div class="row ">
+                                                        <div class="col-md-8"></div>
+                                                        <div class="col-md-4 center">
+                                                            <button type="button" style="background-color:#FF6600" class="btn btn-success" onClick="approve_qn();">Approve</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/form-group-->
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="rows">
+                                    <div class="col-md-12">
+                                        <div class="pull-left" style="padding-top:15px;">
+                                            <span>
+                                                <a href='digitized.php?id=1' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>1</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=2' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>2</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=3' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>3</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=4' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>4</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=5' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>5</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=6' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>6</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=7' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>7</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=8' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>8</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=9' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>9</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=10' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>10</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=11' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>11</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=12' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>12</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=13' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>13</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=14' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>14</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=15' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>15</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=16' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>16</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href='digitized.php?id=17' class='readmore_but20'>
+                                                    <button class='btn btn-warning circle_height34_width34' style='background-color:#CCCCCC; padding:0px;'>17</button>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href="digitized.php?id=2" class="readmore_but20">
+                                                    <button class="btn btn-warning border_radius20" style="background-color:#999999">
+                                                        <i class="fa-arrow-right fa"></i>
+                                                    </button>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--\\\\\\\ container  end \\\\\\-->
+        </div>
+        <div class="copyright_info" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <p style="margin-bottom:0px; font-size:12px;">Copyright © 2015. Testune Technology Pvt. Ltd. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-3 text-right">
+                        <p style="margin-bottom:0px; font-size:12px;">
+                            <a href="../../bankexams/terms_of_use2.php" style="margin-bottom:0px; font-size:12px; color:#000000"
+                                class="teacher_login_form2">Terms of Use / Privacy Policy</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--\\\\\\\ content panel end \\\\\\-->
+    </div>
+    <!--\\\\\\\ inner end\\\\\\-->
+    </div>
+    <a href="#message_display" id="btnForm" name="btnForm"></a>
+    <!--\\\\\\\ wrapper Start \\\\\\-->
+    <div id="message_display" name="message_display" style="display:none">
+        <div style="padding:0px;">
+            <div class="message_box">
+                <div class="message_container">
+                    <div class="message_subject" style="border-bottom:none; height:115px;">
+                        <div class="row">
+                            <div class="col-md-12 sub_message" id="message_convey" name="message_convey"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ read-panel -->
+        </div>
+    </div>
+    <!-- footer section-->
+    <script src="js/common-script.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/jquery.sparkline.js"></script>
+    <script src="plugins/demo-slider/demo-slider.js"></script>
+    <script src="plugins/knob/jquery.knob.min.js"></script>
+    <script src="js/jPushMenu.js"></script>
+    <script src="js/side-chats.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="plugins/scroll/jquery.nanoscroller.js"></script>
+</body>
+
+</html>
+<script language="javascript">
+    $("#btnForm").fancybox({
+        'onStart': function () {
+            $("#message_display").css("display", "block");
+        },
+        'onClosed': function () {
+            $("#message_display").css("display", "none");
+        }
+    });
+
+    function verify_test() {
+        $('#message_convey').html('Firstly all the question to be verified by Admin & Faculty To proceed further.');
+        $('#btnForm').click();
+    }
+
+    function approve_msg() {
+        // $('#message_convey').html("Firstly It must to approved by Admin");
+        // $('#btnForm').click();
+    }
+
+    function approve_qn() {
+        var qn_id = $('#qn_id').val();
+        var id = "1";
+        $.ajax({
+            type: 'POST',
+            url: 'question_approval.php?qn_id=' + qn_id + '&stage=faculty_approval&value=1',
+            data: '',
+            beforeSend: function () {},
+            success: function (response) {
+                if (response == 'fine') {
+                    window.location.href = 'digitized.php?id=' + id;
+                } else {
+                    $('#message_convey').html('Error in the system. Please try it later');
+                    $('#btnForm').click();
+                    window.location.href = 'digitized.php?id=' + id;
+                }
+            }
+        });
+    }
+</script>

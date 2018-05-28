@@ -15,7 +15,7 @@ body {
 
 .navigationBar {
     display: grid;
-    grid-template-columns: 1fr 30px;
+    grid-template-columns: 1fr 40px;
     background-color: #000;
     height: 60px;
     padding: 15px 0 0 15px;
@@ -2292,22 +2292,22 @@ textarea {
 
 /*CREATOR PAGES*/
 
-.upload-btn{
+.upload-btn {
     margin-top: 30px;
 }
 
-.digitization-wrapper{
+.digitization-wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 20px 0;
 }
 
-.digit-header{
+.digit-header {
     font-size: 24px;
 }
 
-._digitStart{
+._digitStart {
     background-color: #218838;
     width: 200px;
     text-align: center;
@@ -2322,7 +2322,218 @@ textarea {
     margin-left: 10px;
 }
 
+/*CK EDITOR DESIGN*/
 
-/**************POP UP CSS***********/
+.test-id-wrapper h1 {
+    font-size: 20px;
+    margin: 30px 15px;
+    color: #000;
+}
 
-.
+.question-wrapper h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.upload-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploaded-image {
+    color: #004D40;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.upload-image {
+    color: #004D40;
+    font-size: 18px;
+}
+
+.main-btn {
+    width: 50px;
+    padding: 3px 6px;
+    text-align: center;
+    margin: 5px 0;
+    background-color: #00897B;
+    border: 1px solid #00897B;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.main-btn-preview {
+    width: 250px;
+    padding: 3px 6px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #00897B;
+    border: 1px solid #00897B;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.main-btn-delete {
+    width: 70px;
+    padding: 3px 6px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #00897B;
+    border: 1px solid #00897B;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.goback-btn {
+    background-color: #ED4933;
+    width: 250px;
+    padding: 3px 3px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ED4933;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.goback-btn:hover {
+    text-decoration: none;
+}
+
+.main-link {
+    color: #004D40;
+    font-size: 18px;
+    margin: 30px 10px;
+}
+
+.sub-link {
+    color: #004D40;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+/*POST DIGITTIAZATION*/
+
+.timeline-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.form-group-header {
+    display: grid;
+    grid-template-columns: 300px auto;
+    place-content: center;
+    border-bottom: 1px solid #000;
+}
+
+.form-group-header h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.edit-link {
+    background-color: #ED4933;
+    width: 300px;
+    padding: 3px 3px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ED4933;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.edit-link:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.option-answer {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+}
+
+.approve-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.approve-button {
+    width: 150px;
+    padding: 3px 6px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #00897B;
+    border: 1px solid #00897B;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+.pagination a.active {
+    background-color: #00897B;
+    color: white;
+    border: 1px solid #00897B;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
