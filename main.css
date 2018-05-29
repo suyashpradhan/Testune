@@ -1320,8 +1320,8 @@ select::-ms-expand {
 
 .footer {
     background-color: #1E252B;
-    height: 100px;
-    margin-top: 20px;
+    height: 120px;
+    margin-bottom: 0;
     width: 100%;
 }
 
@@ -1949,7 +1949,7 @@ select::-ms-expand {
     color: #fff;
 }
 
-input[type=text],
+/* input[type=text],
 select,
 textarea {
     width: 100%;
@@ -1958,7 +1958,7 @@ textarea {
     border-radius: 4px;
     resize: vertical;
     margin: 5px 0;
-}
+} */
 
 .main-Label {
     padding: 12px 12px 12px 0;
@@ -2536,4 +2536,84 @@ textarea {
 
 .pagination a:hover:not(.active) {
     background-color: #ddd;
+}
+
+.feedback-header h1{
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.row-header h3{
+    background-color: #ED4933;
+    width: 250px;
+    padding: 3px 3px;
+    text-align: center;
+    border: 1px solid #ED4933;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 10px auto;
+}
+
+.input-group{
+   margin-top: 50px;
+}
+
+.input-group h3{
+    font-size: 16px;
+    margin: 5px 8px;
+}
+
+.new-label{
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    padding: 10x;
+    border-radius: 3px;
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
+}
+
+.custom-textarea{
+    border: 1px solid #ED4933;
+    width: 250px;
+    padding: 10px;
+    margin-left: 3px;
+    margin-bottom: 15px;
+}
+
+.submit-feedback-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-submit-feedback{
+    background-color: #218838;
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #218838;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    margin: 30px 0;
+}
+
+/*SEND TO PUBLISH PAGE*/
+
+.first-half {
+    border: 1px solid #000;
+    margin: 0 0 40px 60px;
+    width: 500px;
+    height: 250px;
 }

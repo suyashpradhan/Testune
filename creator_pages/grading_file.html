@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="navigationBar">
+        <div class="logoBox">
+            <h1 class="logoBox-header">TES<span>T</span>UNE</h1>
+        </div>
+        <div class="menu-wrapper">
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="button-wrapper">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="performance-header">
+        <h1 class="performance-header-text">Grading System</h1>
+    </div>
+    <div class="container">
+        <div class="timeline-wrapper">
+            <h1>Time Section</h1>
+        </div>
+        <div class="feedback-header">
+            <h1>Kindly fill the feedback / verdict for given grades</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="offset-3 col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 row-header">
+                <h3>Rank Prediction</h3>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 row-header">
+                <h3>Feedback/Verdict</h3>
+            </div>
+            <div class=" col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 row-header">
+                <h3>Action To Be Taken</h3>
+            </div>
+        </div>
+        <form action="" method="post">
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="input-group">
+                        <h3>From</h3>
+                        <input type="text" name="from_0" id="from_0" value="80" class="new-label" disabled="disabled">
+                        <h3>To</h3>
+                        <input type="text" value="100" name="to_0" id="to_0" class="new-label" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="score_analysis_0" id="score_analysis_0" class="custom-textarea" placeholder="For eg: Your score is among the toppers. Expect a rank in top 200."></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Excellent. Your preparation is top notch at the moment."
+                        required=""></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Excellent. Your preparation is top notch at the moment."
+                        required=""></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="input-group">
+                        <h3>From</h3>
+                        <input type="text" name="from_0" id="from_0" value="65" class="new-label" disabled="disabled">
+                        <h3>To</h3>
+                        <input type="text" value="80" name="to_0" id="to_0" class="new-label" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="score_analysis_0" id="score_analysis_0" class="custom-textarea" placeholder="For eg: You score is among the high scorers. Expect a rank between 200-1000."></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Very good. You are well prepared with good conceptual knowledge."
+                        required=""></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Keep on practicing. Refer book/website ( ) for more practice and to keep updated on general awareness."
+                        required=""></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="input-group">
+                        <h3>From</h3>
+                        <input type="text" name="from_0" id="from_0" value="50" class="new-label" disabled="disabled">
+                        <h3>To</h3>
+                        <input type="text" value="65" name="to_0" id="to_0" class="new-label" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="score_analysis_0" id="score_analysis_0" class="custom-textarea" placeholder="For eg: Your score is good enough to clear the cutoff easily. Expect a rank between 1000-5000."></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Very good. You are well prepared with good conceptual knowledge."
+                        required=""></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Keep on practicing. Refer book/website ( ) for more practice and to keep updated on general awareness."
+                        required=""></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="input-group">
+                        <h3>From</h3>
+                        <input type="text" name="from_0" id="from_0" value="30" class="new-label" disabled="disabled">
+                        <h3>To</h3>
+                        <input type="text" value="50" name="to_0" id="to_0" class="new-label" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="score_analysis_0" id="score_analysis_0" class="custom-textarea" placeholder="For eg: Your score is good enough to clear the cutoff easily. Expect a rank between 1000-5000."></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Very good. You are well prepared with good conceptual knowledge."
+                        required=""></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Keep on practicing. Refer book/website ( ) for more practice and to keep updated on general awareness."
+                        required=""></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="input-group">
+                        <h3>From</h3>
+                        <input type="text" name="from_0" id="from_0" value="0" class="new-label" disabled="disabled">
+                        <h3>To</h3>
+                        <input type="text" value="30" name="to_0" id="to_0" class="new-label" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="score_analysis_0" id="score_analysis_0" class="custom-textarea" placeholder="For eg: Your score is good enough to clear the cutoff easily. Expect a rank between 1000-5000."></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Very good. You are well prepared with good conceptual knowledge."
+                        required=""></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <textarea rows="5" name="feedback_0" id="feedback_0" class=" custom-textarea" placeholder="For eg: Keep on practicing. Refer book/website ( ) for more practice and to keep updated on general awareness."
+                        required=""></textarea>
+                </div>
+            </div>
+            <div class="submit-feedback-wrapper">
+                <button class="btn-submit-feedback" id="">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
