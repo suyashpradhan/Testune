@@ -16,12 +16,22 @@ body {
 .navigationBar {
     display: grid;
     grid-template-columns: 1fr 40px;
+    grid-gap: 30px;
     background-color: #000;
     height: 60px;
     padding: 15px 0 0 15px;
     margin: 0;
     width: 100%;
 }
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+}
+
 
 .logoBox-header {
     font-size: 28px;
@@ -30,18 +40,11 @@ body {
     font-weight: 900;
 }
 
-.menu-wrapper h1 {
-    font-size: 18px;
-    color: #fff;
-    padding-right: 10px;
-    display: inline-block;
-    text-transform: uppercase;
-}
-
 .menu-wrapper i {
     font-size: 18px;
     color: #fff;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .hero-wrapper {
@@ -911,8 +914,7 @@ body {
     background-color: #00695C;
     height: 400px;
     width: auto;
-    <<<<<<< HEAD=======margin-bottom: 50px;
-    >>>>>>>b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1
+    margin-bottom: 50px;
 }
 
 .dashboard-content {
@@ -938,9 +940,8 @@ body {
 }
 
 .header-main {
-    <<<<<<< HEAD background-color: #5DA7AE;
-    =======/* background-color: #5da7ae; */
-    >>>>>>>b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1 height: 60px;
+     background-color: #5DA7AE;
+     height: 60px;
     color: #000;
     padding-left: 15px;
     padding-top: 5px;
@@ -951,11 +952,11 @@ body {
 }
 
 .topicName h1 {
-    <<<<<<< HEAD font-size: 20px;
+    font-size: 20px;
     margin: 5px 0 5px 10px;
-    =======font-size: 18px;
+    font-size: 18px;
     margin: 5px 0 5px 20px;
-    >>>>>>>b976e5f0ec5a9671d0cf24f9d24d555b8788c1b1 color: #777;
+    color: #777;
     letter-spacing: 2px;
 }
 
@@ -1117,21 +1118,6 @@ body {
 
 .academic-table-header {
     text-align: center;
-}
-
-/* /* select {
-    /* for Firefox */
-
--moz-appearance: none;
-/* for Chrome */
-
--webkit-appearance: none;
-}
-
-/* For IE10 */
-
-select::-ms-expand {
-    display: none;
 }
 
 @media screen and (max-width:600px) and (min-width:10px) {
@@ -2325,17 +2311,17 @@ textarea {
 /*CK EDITOR DESIGN*/
 
 .test-id-wrapper h1 {
-    font-size: 20px;
-    margin: 30px 15px;
+    font-size: 18px;
+    margin: 30px 15px 5px 15px;
     color: #000;
 }
 
 .question-wrapper h1 {
-    text-align: center;
-    font-size: 30px;
+    text-align: left;
+    font-size: 20px;
     color: #000;
-    text-transform: uppercase;
     letter-spacing: 2px;
+    margin-left: 15px;
 }
 
 .upload-image-wrapper {
@@ -2355,8 +2341,9 @@ textarea {
     font-size: 18px;
 }
 
+
 .main-btn {
-    width: 50px;
+    width: 100px;
     padding: 3px 6px;
     text-align: center;
     margin: 5px 0;
@@ -2370,8 +2357,23 @@ textarea {
     border-radius: 3px;
 }
 
+.preview-pop{
+    width: 100px;
+    padding: 3px 6px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #00897B;
+    border: 1px solid #00897B;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
 .main-btn-preview {
-    width: 250px;
+    width: 320px;
     padding: 3px 6px;
     text-align: center;
     margin: 10px 0;
@@ -2400,6 +2402,10 @@ textarea {
     border-radius: 3px;
 }
 
+.go-wrapper{
+    margin: 0 0 15px 0;
+}
+
 .goback-btn {
     background-color: #ED4933;
     width: 250px;
@@ -2422,7 +2428,7 @@ textarea {
 .main-link {
     color: #004D40;
     font-size: 18px;
-    margin: 30px 10px;
+    margin: 30px 30px 0 0;
 }
 
 .sub-link {
@@ -2523,7 +2529,7 @@ textarea {
     margin: 0 4px;
 }
 
-.pagination a:hover{
+.pagination a:hover {
     text-decoration: none;
     color: #000;
 }
@@ -2538,13 +2544,13 @@ textarea {
     background-color: #ddd;
 }
 
-.feedback-header h1{
+.feedback-header h1 {
     font-size: 20px;
     letter-spacing: 1px;
     word-spacing: 1px;
 }
 
-.row-header h3{
+.row-header h3 {
     background-color: #ED4933;
     width: 250px;
     padding: 3px 3px;
@@ -2559,16 +2565,16 @@ textarea {
     margin: 10px auto;
 }
 
-.input-group{
-   margin-top: 50px;
+.input-group {
+    margin-top: 50px;
 }
 
-.input-group h3{
+.input-group h3 {
     font-size: 16px;
     margin: 5px 8px;
 }
 
-.new-label{
+.new-label {
     width: 60px;
     text-align: center;
     font-size: 16px;
@@ -2579,7 +2585,7 @@ textarea {
     background-color: #fff;
 }
 
-.custom-textarea{
+.custom-textarea {
     border: 1px solid #ED4933;
     width: 250px;
     padding: 10px;
@@ -2587,13 +2593,13 @@ textarea {
     margin-bottom: 15px;
 }
 
-.submit-feedback-wrapper{
+.submit-feedback-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.btn-submit-feedback{
+.btn-submit-feedback {
     background-color: #218838;
     width: 300px;
     padding: 5px;
@@ -2610,9 +2616,75 @@ textarea {
 }
 
 /*SEND TO PUBLISH PAGE*/
+
 .first-half {
     border: 1px solid #000;
     margin: 0 0 40px 60px;
     width: 500px;
     height: 250px;
+}
+
+/***********CREATOR DASHBOARD********/
+.creator-dashboard{
+    background-color: #00695C;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.creator-dashboard h1{
+    font-size: 60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.profile-header {
+    color: #000;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.profile-header:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.submit-link {
+    background-color: #00695C;
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #00695C;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 40px;
+}
+
+.submit-link a{
+    color: #fff;
+}
+
+.submit-link a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-start-test{
+    background-color: #00695C;
+    height: 40px;
+    width: 100px;
+    border:1px solid #00695C;
+}
+
+.btn-start-test i{
+    color: #fff;
+    font-size: 14px;
 }

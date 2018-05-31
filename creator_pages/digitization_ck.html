@@ -81,10 +81,10 @@
 <body>
     <div class="navigationBar">
         <div class="logoBox">
-            <h1 class="logoBox-header">TES<span>T</span>UNE</h1>
+            <h1 class="logoBox-header">TES
+                <span>T</span>UNE</h1>
         </div>
         <div class="menu-wrapper">
-            <!--<h1>Menu</h1> -->
             <i class="fas fa-bars" onclick="openNav()"></i>
         </div>
         <div id="mySidenav" class="sidenav">
@@ -103,9 +103,10 @@
     </div>
 
     <div class="test-id-wrapper">
-        <h1>Test Id Here:</h1>
+        <h1>Test Id Here : </h1>
     </div>
-    <!--   <div class="section">
+
+    <!--<div class="section">
         <div class="container clearfix">
             <div class="grid_12 action3">
                 <h1>Submit Question No. 1 For Testid: Test_637</h1>
@@ -122,6 +123,7 @@
         <a href="view_photo_uploaded.php" id="view_photo" name="view_photo" class="uploaded-image">View Uploaded Photo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
         <a href="upload_photo.php" id="upload_photo" name="upload_photo" class="upload-image">Upload Photo</a>
     </div>
+
     <!-- <div class="section colored">
         <div class="container clearfix">
             <div class="grid_12 action3">
@@ -130,6 +132,7 @@
             </div>
         </div>
     </div> -->
+
     <div class="section colored">
         <div class="container clearfix">
             <div class="grid_9 features_style1">
@@ -173,7 +176,6 @@
                                     <textarea cols="25" rows="3" id="answer4" class="ckeditor" name="answer4"></textarea>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
                                     <b>* Correct Answer</b>
@@ -249,24 +251,23 @@
                                     </select>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
                                     <!-- <input type="submit" name="sub3" id="sub3" value="Save" class="save-btn"> -->
                                     <button type="submit" name="sub3" id="sub3" class="main-btn">Save</button>
                                 </td>
                                 <td>
-                                    <a href="preview_question.php?test_id=Test_637&id=1" /> 
-                                    <input type="button" name="sub" id="sub" value="Preview" />
-                                    </a>
+                                    <a href="preview_question.php?test_id=Test_637&id=1" />
+                                    <!-- <input type="button" name="sub" id="sub" value="Preview" class="preview-pop"/> -->
+                                    <button type="button" name="sub" id="sub" value="Preview" class="preview-pop">Preview</button></a>
                                 </td>
                                 <td>
                                     <!-- <input type="submit" name="sub4" id="sub4" value="NEXT with the different Question Type" /> </td> -->
                                     <button type="submit" name="sub4" id="sub4" class="main-btn-preview">NEXT with the different Question Type</button>
-                                <td>
-                                   <!--  <input type="submit" name="sub6" id="sub6" value="Delete" /> -->
-                                   <button type="submit" name="sub6" id="sub6" class="main-btn-delete">Delete</button>
-                                </td>
+                                    <td>
+                                        <!--  <input type="submit" name="sub6" id="sub6" value="Delete" /> -->
+                                        <button type="submit" name="sub6" id="sub6" class="main-btn-delete">Delete</button>
+                                    </td>
                             </tr>
                         </table>
                     </div>
@@ -278,9 +279,11 @@
         <div class="container clearfix">
             <div class="grid_12 action3">
                 <!--button wrapper here-->
-                <a href="manage_question_approval.php" class="goback-btn">
-                    <span>Click Here! to go Back</span>
-                </a>
+                <div class="go-wrapper">
+                    <a href="manage_question_approval.php" class="goback-btn">
+                        <span>Click Here! to go Back</span>
+                    </a>
+                </div>
                 <p>
                     <a href="type_of_question.php?id=1" id="type_of_question" name="type_of_question" class="pop main-link">Change Question Type</a>
                     <a href="select_type_para_question.php?id=1" id="para_type_page" name="para_type_page" class="pop sub-link">Change Paragraph Question Type</a>
