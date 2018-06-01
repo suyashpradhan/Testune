@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+    <script type="text/javascript" src="../Home/fancybox/jquery.min.js"></script>
+	<link rel="stylesheet" href="../main.css">
+</head>
+
+<!-- <section class="wrapper style5">
+    <div class="inner">
+        <h4>Student Login</h4>
+        <form method="post" action="">
+            <div class="row uniform">
+                <div class="12u 12u$(xsmall)">
+
+                    <input type="text" id="institute_id" name="institute_id" placeholder="Institute Id" required>
+
+                </div>
+                <div class="12u 12u$(xsmall)">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="12u 12u$(xsmall)">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="12u$">
+                    <ul class="actions">
+                        <li>
+                            <input type="button" id="sub" name="sub" value="Login" onClick="login()" class="special" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+</section> -->
+
+<script language="javascript">
+    function enable_button() {
+        $('#sub').removeAttr('disabled');
+    }
+
+
+    $("#password").keyup(function (event) {
+        if (event.keyCode == 13) {
+            login();
+        }
+    });
+
+    function login() {
+        var user = $.trim($('#username').val());
+        var pass = $.trim($('#password').val());
+        var institute_id = $.trim($('#institute_id').val());
+        var login_check = 'student';
+        if (institute_id == '' || user == '' || pass == '') {
+            alert('Institute Id/Email Id/Password Required');
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: '../Home/login_check.php',
+                data: {
+                    username: user,
+                    password: pass,
+                    institute_id: institute_id,
+                    logintype: 'student_institute'
+                },
+                beforeSend: function () {},
+                success: function (response) {
+                    if (response == 'student_institute') {
+                        parent.window.location = "student/index.php";
+                    } else {
+                        alert("Incorrect username & password.");
+                    }
+                }
+            });
+        }
+    }
+</script>

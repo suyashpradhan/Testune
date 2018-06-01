@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: "Abadi MT Condensed", serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -31,7 +32,6 @@ body {
 .logo-link:hover {
     text-decoration: none;
 }
-
 
 .logoBox-header {
     font-size: 28px;
@@ -940,8 +940,8 @@ body {
 }
 
 .header-main {
-     background-color: #5DA7AE;
-     height: 60px;
+    background-color: #5DA7AE;
+    height: 60px;
     color: #000;
     padding-left: 15px;
     padding-top: 5px;
@@ -1935,16 +1935,33 @@ body {
     color: #fff;
 }
 
-/* input[type=text],
-select,
-textarea {
+
+.query-customer {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
     margin: 5px 0;
-} */
+}
+
+.subject-customer {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 5px 0;
+}
+
+.customer-description {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 5px 0;
+}
 
 .main-Label {
     padding: 12px 12px 12px 0;
@@ -2341,7 +2358,6 @@ textarea {
     font-size: 18px;
 }
 
-
 .main-btn {
     width: 100px;
     padding: 3px 6px;
@@ -2357,7 +2373,7 @@ textarea {
     border-radius: 3px;
 }
 
-.preview-pop{
+.preview-pop {
     width: 100px;
     padding: 3px 6px;
     text-align: center;
@@ -2402,7 +2418,7 @@ textarea {
     border-radius: 3px;
 }
 
-.go-wrapper{
+.go-wrapper {
     margin: 0 0 15px 0;
 }
 
@@ -2625,7 +2641,8 @@ textarea {
 }
 
 /***********CREATOR DASHBOARD********/
-.creator-dashboard{
+
+.creator-dashboard {
     background-color: #00695C;
     height: 400px;
     display: flex;
@@ -2634,7 +2651,7 @@ textarea {
     flex-flow: column wrap;
 }
 
-.creator-dashboard h1{
+.creator-dashboard h1 {
     font-size: 60px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2668,23 +2685,77 @@ textarea {
     margin-top: 40px;
 }
 
-.submit-link a{
+.submit-link a {
     color: #fff;
 }
 
-.submit-link a:hover{
+.submit-link a:hover {
     color: #fff;
     text-decoration: none;
 }
 
-.btn-start-test{
+.btn-start-test {
     background-color: #00695C;
     height: 40px;
     width: 100px;
-    border:1px solid #00695C;
+    border: 1px solid #00695C;
 }
 
-.btn-start-test i{
+.btn-start-test i {
     color: #fff;
     font-size: 14px;
+}
+
+/*POPUP CREATOR LOGIN AND STUDENT LOGIN*/
+
+.body-wrapper {
+    background-color: #fff;
+}
+
+._creatorLoginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+._creatorLoginForm h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #777;
+    margin: 30px 0;
+}
+
+.common-field {
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    border: 1px solid #00695C;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+._creatorLoginButton {
+    border: 1px solid #00897B;
+    background-color: #00897B;
+    color: #fff;
+    backface-visibility: hidden;
+    transition: .2s all;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+._creatorLoginButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+._creatorLoginButton:active {
+    transform: translate(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script type="text/javascript" src="../Home/fancybox/jquery.min.js"></script>
+	<link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+	
+	<!-- <section class="wrapper style5">
+		<div class="inner">
+			<h4>Login As A Test Creator</h4>
+			<form method="post" action="">
+				<div class="row uniform">
+					<div class="12u 12u$(xsmall)">
+						<input type="text" id="institute_id" name="institute_id" placeholder="Institute Id" class="_creatorUsername" required>
+					</div>
+					<div class="12u 12u$(xsmall)">
+						<input type="text" id="username" name="username" placeholder="Username" class="_creatorPassword" required>
+					</div>
+
+					<div class="12u 12u$(xsmall)">
+						<input type="password" id="password" name="password" placeholder="Password" class="_creatorButton"required>
+					</div>
+
+					<div class="12u$">
+						<ul class="actions">
+							<li>
+								<input type="button" id="sub" name="sub" value="Login" onClick="login()" class="special" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</form>
+	</section> -->
+
+	<div class="body-wrapper">
+		<form action="" class="_creatorLoginForm">
+			<h1>Login As A TEST CREATOR</h1>
+			<input type="text" id="institute_id" name="institute_id" placeholder="@institute id" class="common-field _creatorUsername" required>
+			<input type="text" id="username" name="username" placeholder="@username" class="common-field _creatorPassword" required>
+			<input type="password" id="password" name="password" placeholder="@password" class="common-field _creatorButton" required>
+			<input type="button" id="sub" name="sub" value="Login" onClick="login()" class="common-field _creatorLoginButton" />
+		</form>
+	</div>
+
+	<script language="javascript">
+		function enable_button() {
+			$('#sub').removeAttr('disabled');
+		}
+		$("#password").keyup(function (event) {
+			if (event.keyCode == 13) {
+				login();
+			}
+		});
+
+		function login() {
+			var user = $.trim($('#username').val());
+			var pass = $.trim($('#password').val());
+			var institute_id = $.trim($('#institute_id').val());
+			var login_check = 'student';
+			if (institute_id == '' || user == '' || pass == '') {
+				alert('Institute Id/Email Id/Password Required');
+			} else {
+				$.ajax({
+					type: 'POST',
+					url: '../Home/login_check.php',
+					data: {
+						username: user,
+						password: pass,
+						institute_id: institute_id,
+						logintype: 'inst_test_creator'
+					},
+					beforeSend: function () {},
+					success: function (response) {
+						if (response == 'test_creator') {
+							parent.window.location = "faculty/index.php";
+						} else {
+							alert("Incorrect username & password.");
+						}
+					}
+				});
+			}
+		}
+	</script>
+</body>
+
+</html>
