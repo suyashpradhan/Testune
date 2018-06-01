@@ -1935,7 +1935,6 @@ body {
     color: #fff;
 }
 
-
 .query-customer {
     width: 100%;
     padding: 12px;
@@ -2007,7 +2006,7 @@ body {
 }
 
 .mainDiv {
-    margin: 75px auto;
+    margin: 50px auto;
 }
 
 .customer-button-wrapper {
@@ -2455,25 +2454,21 @@ body {
 
 /*POST DIGITTIAZATION*/
 
-.timeline-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
-
 .form-group-header {
     display: grid;
     grid-template-columns: 300px auto;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     border-bottom: 1px solid #000;
+    margin: 20px 0;
+    padding-bottom: 20px;
 }
 
 .form-group-header h1 {
     font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 8px;
+    margin-top: 7px;
 }
 
 .edit-link {
@@ -2506,13 +2501,14 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #000;
+    padding-bottom: 20px;
 }
 
 .approve-button {
     width: 150px;
     padding: 3px 6px;
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0 5px 0;
     background-color: #00897B;
     border: 1px solid #00897B;
     color: #fff;
@@ -2540,7 +2536,6 @@ body {
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-    transition: background-color .3s;
     border: 1px solid #ddd;
     margin: 0 4px;
 }
@@ -2548,16 +2543,6 @@ body {
 .pagination a:hover {
     text-decoration: none;
     color: #000;
-}
-
-.pagination a.active {
-    background-color: #00897B;
-    color: white;
-    border: 1px solid #00897B;
-}
-
-.pagination a:hover:not(.active) {
-    background-color: #ddd;
 }
 
 .feedback-header h1 {
