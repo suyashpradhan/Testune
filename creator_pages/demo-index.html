@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/admin.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery-2.1.0.js"></script>
+    <script src="js/common-script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajaxupload.3.5.js"></script>
+    <link href="../main.css" rel="stylesheet">
+    <link href="../fancybox/rupee.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <style type="text/css">
+        .circular {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: #999999 2px solid !important;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+        }
+
+        div#container {
+            width: 200px;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            background: #000;
+            border: 1px solid #1a1a1a;
+        }
+
+        /* HOVER STYLES */
+
+        div#pop-up {
+            display: none;
+            position: absolute;
+            width: 200px;
+            padding: 10px;
+            background: #eeeeee;
+            color: #000000;
+            border: 1px solid #BBBBBB;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            font-size: 90%;
+        }
+    </style>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Home/fancybox/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" type="text/css" href="../../Home/fancybox/jquery.fancybox-1.3.4.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.pop2").fancybox({
+                'overlayColor': '#000',
+                'overlayOpacity': 0.9
+            });
+            $("a.pop").fancybox({
+                'type': 'iframe',
+                'autoScale': true,
+                'autoDimensions': true,
+                'fitToView': true,
+            });
+            $("a.submit_verdict").fancybox({
+                'type': 'iframe',
+                'width': 550,
+                'height': 520,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_notification_message").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 600,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.message_display").fancybox({
+                'type': 'iframe',
+                'width': '300',
+                'height': '300',
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.teacher_login_form2").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 535,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.teacher_login_form").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 380,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_notification_message1").fancybox({
+                'type': 'iframe',
+                'width': 550,
+                'height': 600,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_check").fancybox({
+                'type': 'iframe',
+                'width': 1000,
+                'height': 700,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_check2").fancybox({
+                'type': 'iframe',
+                'width': 1000,
+                'height': 500,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+
+        });
+        $(document).ready(function () {
+            $('#login-trigger').click(function () {
+                $(this).next('#login-content').slideToggle();
+                $(this).toggleClass('active');
+                if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+                else $(this).find('span').html('&#x25BC;')
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        //window.history.forward(1);
+        //function noBack(){
+        //window.history.forward();
+        $('#user_image').hide();
+        $('#user_image').load(function () {
+            $('#user_image').show();
+        });
+    </script>
+</head>
+
+<body class="dark_theme" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+    <div class="navigationBar">
+        <div class="logoBox">
+            <a href="index.php">
+                <h1 class="logoBox-header">TES
+                    <span>T</span>UNE</h1>
+            </a>
+        </div>
+        <div class="menu-wrapper">
+            <!--  <h1>Menu</h1> -->
+            <i class="fas fa-bars" onClick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+
+            <a href="edit_profile.php">
+                <i class="fas fa-angle-right"></i>Personal Profile</a>
+            <a href="assign_test_batch.php">
+                <i class="fas fa-angle-right"></i>Assign Test</a>
+            <a href="change_password.php">
+                <i class="fas fa-angle-right"></i>Change Password</a>
+            <a href="?q=logout">
+                <i class="fas fa-angle-right"></i>Logout</a>
+
+        </div>
+    </div>
+    <script language='javascript'>
+        var parent_page_url = window.location.pathname;
+
+        function selected_exam() {
+            var exam = $('#exam').val();
+            window.location = parent_page_url + '?exam_name=' + exam;
+        }
+
+        function exam_id(p) {
+            $('#exam_name').html(p);
+            $.fancybox.close();
+            window.location.reload();
+        }
+    </script>
+    <script language='javascript'>
+        function moddetail(p) {
+            $(function () {
+                var moveLeft = 20;
+                var moveDown = 10;
+                $('a.trigger').hover(function (e) {
+                    $('div#pop-up').html(p);
+                    $('div#pop-up').show();
+                }, function () {
+                    $('div#pop-up').hide();
+                });
+                $('a.trigger').mousemove(function (e) {
+                    $("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+                });
+            });
+        }
+    </script>
+    <div class="performance-header">
+        <h1 class="performance-header-text">CREATOR DASHBOARD</h1>
+        <a href="edit_profile.php" class="profile-header">Welcome Vijual</a>
+    </div>
+
+    <input type="hidden" value="TC_1223_1" id="faculty_id" name="faculty_id" />
+    <input type="hidden" value="2" id="no_of_test" name="no_of_test" />
+    <script src="../fancybox/jquery-ui.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../fancybox/jquery-ui.css" />
+    <script type="text/javascript">
+        $(function () {
+            $("#from_date").datepicker({
+                dateFormat: 'dd-mm-yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "2014:2015"
+            });
+            $("#to_date").datepicker({
+                dateFormat: 'dd-mm-yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "2014:2015"
+            });
+        });
+    </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h3 class="section-header">Preview</h3>
+                    <div class="timeline-section">
+                        <div class="topic-input">
+                            <button id="test_tab_1" name="test_tab_1" onclick="get_test_detail('1')" class="btn-main fBtn">Wave Optics</button>
+                            <button id="test_tab_2" name="test_tab_2" onclick="get_test_detail('2')" class="btn-main fBtn">Electricity</button>
+                            <h1 class="topic-header-text">Physics : Electricity</h1>
+                            <div class="inner-timeline">
+                                <div class="content">
+                                    <div class="progress-tracker">
+                                        <div class="circle active">
+                                            <span class="label" id="fileupload_circle">&nbsp;</span>
+                                        </div>
+                                        <span class="bar" style="width:126px;"></span>
+                                        <div class="circle active">
+                                            <span class="label" id="digitization_circle">&nbsp;</span>
+                                        </div>
+
+                                        <span class="bar" style="width:126px;"></span>
+                                        <div class="circle active">
+                                            <span class="label" id="verdict_circle">&nbsp;</span>
+                                        </div>
+                                        <span class="bar" style="width:126px;"></span>
+                                        <div class="circle active">
+                                            <span class="label" id="publish_circle">&nbsp;</span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li style="width: 128px; text-align:center;" class="green_text timeline_text">
+                                            <strong id="fileupload">Upload File</strong>
+                                        </li>
+                                        <li style="width: 158px; text-align:center;" class="timeline_text">
+                                            <strong id="digitization">Digitization</strong>
+                                        </li>
+                                        <li style="width: 150px; text-align:center;" class="timeline_text">
+                                            <strong id="verdict">Grading</strong>
+                                        </li>
+                                        <li style="width: 111px; text-align:center;" class="timeline_text">
+                                            <strong id="publish">Send to Publish</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="section">
+                                    <a href="#" id="proceed_link" name="proceed_link">
+                                        <button type="button" class="start-dock-btn">
+                                            <i class="fa fa-play"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="digitization_process.php" class="steps-pop">How to upload test for digitization process <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="footerInner">
+                    <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+                </div>
+            </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+            crossorigin="anonymous">
+    </body>
+
+</html>

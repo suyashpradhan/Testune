@@ -447,8 +447,6 @@ body {
     border: 1px solid #000;
 }
 
-/*****************TIMELINE CSS*****************/
-
 .progressBarWrapper {
     border: 1px solid #000;
     margin: 0 0 40px 60px;
@@ -733,11 +731,18 @@ body {
 /*************PERFORMANCE ANALYSIS PAGE CSS*********/
 
 .performance-header {
-    height: 100px;
+    height: 150px;
     background-color: #00695C;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column wrap;
+}
+
+.performance-header-text-sub {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
 }
 
 .performance-header-text {
@@ -2743,4 +2748,175 @@ body {
 ._creatorLoginButton:active {
     transform: translate(-1px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/************FINAL PAGE*******/
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin: 0 0 30px 0;
+}
+
+.section-header {
+    padding: 5px 4px;
+    font-size: 24px;
+    background-color: #ccc;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    color: #000;
+    width: 100px;
+    margin: 40px 0 0 1px;
+}
+
+.digitized-section-preview {
+    border: 1px solid #777;
+    border-radius: 10px;
+}
+
+.grading-system-preview {
+    border: 1px solid #777;
+    border-radius: 10px;
+}
+
+.preview-btn:link,
+.preview-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+.preview-btn {
+    background-color: #ED4933;
+    border: 1px solid #ED4933;
+    color: #fff;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    backface-visibility: hidden;
+    transition: .4s all;
+    position: relative;
+}
+
+.preview-btn:hover {
+    transform: translateY(-5px);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.preview-btn:active {
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.preview-btn::after {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .4s all;
+    background-color: #ED4933;
+}
+
+.preview-btn:hover::after {
+    transform: scale(1.5) scaleY(1.3);
+    opacity: 0;
+}
+
+.submit-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 40px 0;
+}
+
+.submit-publish {
+    background-color: #218838;
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #218838;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.submit-button-wrapper p {
+    margin: 15px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/********DASHBOARD INDEX PAGE*****/
+
+.timeline-section{
+    border: 1px solid #777;
+    margin-bottom: 60px;
+}
+
+.inner-timeline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.start-dock-btn{
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: #ED4933;
+    border: 1px solid #ED4933;
+    color: #fff;
+    letter-spacing: 2px;
+    height: 60px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.timeline_text{
+    font-size: 16px;
+}
+
+.topic-header-text{
+    margin: 10px 30px 5px 30px;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+.btn-main{
+    margin: 30px 30px 5px 30px;
+}
+
+.fBtn{
+    width: 200px;
+    padding: 5px;
+    background-color: #218838;
+    border: 1px solid #218838;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.steps-pop{
+    margin: 0 30px 30px 30px;
+    color: rgb(206, 13, 13);
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+.steps-pop:hover{
+    color: #000;
+    text-decoration: none;
 }
