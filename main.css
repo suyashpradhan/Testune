@@ -16,13 +16,24 @@ body {
 
 .navigationBar {
     display: grid;
-    grid-template-columns: 1fr 40px;
+    grid-template-columns: 1fr auto;
     grid-gap: 30px;
     background-color: #000;
     height: 60px;
-    padding: 15px 0 0 15px;
+    padding: 15px 15px 0 15px;
     margin: 0;
     width: 100%;
+}
+
+.logout {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.logout:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .logo-link {
@@ -105,8 +116,6 @@ body {
 .nav-links {
     font-size: 20px;
 }
-
-/***********************ENDS HERE***********/
 
 .logoBox-header span {
     color: #43BDBD;
@@ -1900,7 +1909,7 @@ body {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    margin: 10px 0;
+    margin: 10px 0 30px 0;
 }
 
 .col-btn {
@@ -1908,7 +1917,7 @@ body {
     border: 1px solid #4ca64c;
     color: #fff;
     padding: 2px;
-    flex-basis: 100px;
+    flex-basis: 120px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -1916,6 +1925,14 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.col-btn:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .demo_table tr td {
@@ -2537,12 +2554,14 @@ body {
 }
 
 .pagination a {
-    color: black;
+    color: #fff;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid #00897B;
     margin: 0 4px;
+    background-color: #00897B;
+    font-size: 18px;
 }
 
 .pagination a:hover {
@@ -2859,21 +2878,21 @@ body {
     letter-spacing: 1px;
 }
 
-/********DASHBOARD INDEX PAGE*****/
+/*****DASHBOARD INDEX PAGE*****/
 
-.timeline-section{
+.timeline-section {
     border: 1px solid #777;
     margin-bottom: 60px;
 }
 
-.inner-timeline{
+.inner-timeline {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
 }
 
-.start-dock-btn{
+.start-dock-btn {
     margin-top: 10px;
     margin-left: 30px;
     background-color: #ED4933;
@@ -2885,21 +2904,21 @@ body {
     border-radius: 5px;
 }
 
-.timeline_text{
+.timeline_text {
     font-size: 16px;
 }
 
-.topic-header-text{
+.topic-header-text {
     margin: 10px 30px 5px 30px;
     color: #777;
     letter-spacing: 2px;
 }
 
-.btn-main{
+.btn-main {
     margin: 30px 30px 5px 30px;
 }
 
-.fBtn{
+.fBtn {
     width: 200px;
     padding: 5px;
     background-color: #218838;
@@ -2907,16 +2926,17 @@ body {
     color: #fff;
     font-size: 20px;
     letter-spacing: 1px;
+    border-radius: 5px;
 }
 
-.steps-pop{
+.steps-pop {
     margin: 0 30px 30px 30px;
     color: rgb(206, 13, 13);
     letter-spacing: 2px;
     font-size: 24px;
 }
 
-.steps-pop:hover{
+.steps-pop:hover {
     color: #000;
     text-decoration: none;
 }
