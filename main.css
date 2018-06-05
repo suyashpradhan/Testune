@@ -1318,23 +1318,34 @@ body {
 
 /***********FOOTER CSS************/
 
-.footer {
+/* .footer {
     background-color: #1E252B;
     height: 120px;
     margin-bottom: 0;
     width: 100%;
 }
+ */
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1E252B;
+    margin-bottom: 1px;
+}
 
 .footerInner {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 .footerInner h1 {
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     letter-spacing: 5px;
-    padding: 50px 0 0 0;
 }
 
 /****************MEDIA QUERY******************/
@@ -1493,7 +1504,7 @@ body {
     text-align: center;
     margin: 10px 0;
     border: 1px solid #00897B;
-    border-radius: 3px;
+    border-radius: 100px;
 }
 
 ._password {
@@ -1502,7 +1513,7 @@ body {
     text-align: center;
     margin: 10px 0;
     border: 1px solid #00897B;
-    border-radius: 3px;
+    border-radius: 100px;
 }
 
 ._loginButton {
@@ -1518,7 +1529,7 @@ body {
     letter-spacing: 2px;
     cursor: pointer;
     box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-    border-radius: 3px;
+    border-radius: 100px;
 }
 
 ._loginButton:hover {
@@ -1534,9 +1545,9 @@ body {
 
 ._forgot:hover {
     color: #2e2e2e;
-    text-decoration: underline;
+    text-decoration: none;
     transition: all .5s;
-    backface-visibility: hidden;
+    text-decoration: underline;
 }
 
 .login--form--sub {
@@ -1552,7 +1563,7 @@ body {
     width: 300px;
     padding: 8px 0;
     text-align: center;
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
     border: 1px solid #ED4933;
     color: #fff;
     font-size: 20px;
@@ -1560,12 +1571,12 @@ body {
     letter-spacing: 2px;
     cursor: pointer;
     box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-    border-radius: 3px;
+    border-radius: 100px;
 }
 
 ._loginButtonCreator:hover {
-    background-color: #EF5E4A;
-    border: 1px solid #EF5E4A;
+    background-color: #d5412d;
+    border: 1px solid #d5412d;
 }
 
 ._loginButtonStudent {
@@ -1573,7 +1584,7 @@ body {
     width: 300px;
     padding: 8px 0;
     text-align: center;
-    margin: 10px 0;
+    margin: 10px 0 5px 0;
     border: 1px solid #ED4933;
     color: #fff;
     font-size: 20px;
@@ -1581,12 +1592,12 @@ body {
     letter-spacing: 2px;
     cursor: pointer;
     box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-    border-radius: 3px;
+    border-radius: 100px;
 }
 
 ._loginButtonStudent:hover {
-    background-color: #EF5E4A;
-    border: 1px solid #EF5E4A;
+    background-color: #d5412d;
+    border: 1px solid #d5412d;
 }
 
 .login-avatar {
@@ -1603,32 +1614,30 @@ body {
     }
     ._username {
         width: 200px;
-        margin-right: 50px;
+        margin-right: 30px;
     }
     ._password {
         width: 200px;
-        margin-right: 50px;
+        margin-right: 30px;
     }
     ._loginButton {
         width: 200px;
-        margin-right: 50px;
+        margin-right: 30px;
     }
-    /*  ._forgot {
-        margin-right: 20px;
+    ._forgot {
+        margin-right: 30px;
     }
     ._loginButtonCreator {
         width: 200px;
-        margin-right: 20px;
+        margin-right: 30px;
         font-size: 14px;
     }
     ._loginButtonStudent {
         width: 200px;
-        margin-right: 20px;
+        margin-right: 30px;
         font-size: 14px;
-    } */
-    .login-avatar {
-        margin-right: 50px;
     }
+
 }
 
 @media screen and (max-width:600px) and (min-width:350px) {
@@ -1651,23 +1660,20 @@ body {
         margin-right: 40px;
         margin-left: 30px;
     }
-    /*  ._forgot {
-        margin-right: 40px;
+    ._forgot {
+        margin-right: 20px;
     }
     ._loginButtonCreator {
         width: 300px;
-        margin-right: 40px;
+        margin-right: 20px;
         font-size: 14px;
     }
     ._loginButtonStudent {
         width: 300px;
-        margin-right: 40px;
+        margin-right: 20px;
         font-size: 14px;
-    } */
-    .login-avatar {
-        margin-right: 0px;
-        margin-left: 30px;
     }
+   
 }
 
 /*********INDEX PAGE CSS*********/
