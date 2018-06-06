@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="navigationBar">
+        <div class="logoBox">
+            <h1 class="logoBox-header">TES
+                <span>T</span>UNE</h1>
+        </div>
+        <div class="menu-wrapper">
+
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="button-wrapper">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="choose-subject-wrapper">
+            <form action="#" method="post">
+                <select name="" class="choose-subject" onclick="selected_subject()">
+                    <option value="">Physics Class : 11</option>
+                    <option value="">Physics Class : 12</option>
+                </select>
+            </form>
+        </div>
+        <div class="main-dock-wrapper">
+            <ul class="dock-first-row">
+                <li class="dock-item">
+                    <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show Undocked</a>
+                </li>
+                <li class="dock-item">
+                    <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show Published</a>
+                </li>
+                <li class="dock-item">
+                    <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show In Progress</a>
+                </li>
+                <li class="dock-item">
+                    <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show All</a>
+                </li>
+                <li class="dock-item-last">
+                    <input type="search" name="" id="search" class="search-box" placeholder="Search">
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+   <!--  <div class="footer">
+        <div class="footerInner">
+            <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+        </div>
+    </div> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>

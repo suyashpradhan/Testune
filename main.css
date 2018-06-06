@@ -2985,3 +2985,66 @@ body {
     color: #000;
     text-decoration: none;
 }
+
+/*****TEACHER FOUNDRY*****/
+
+.choose-subject-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.choose-subject {
+    margin: 15px 0;
+    padding: 10px 0;
+    width: 300px;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #777;
+}
+
+.dock-first-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    height: 50px;
+}
+
+.dock-first-row li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.dock-item {
+   flex: 1;
+   margin-top: 10px;
+}
+
+.dock-item-last {
+    flex-basis:  1;
+}
+
+.search-box{
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 100px;
+    border: 1px solid #ED4933;
+    color: #777;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.dock-item a{
+    color: #ED4933;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.dock-item a:hover{
+    color: #000;
+    text-decoration: none;
+}
