@@ -1540,7 +1540,7 @@ img {
 }
 
 .panel {
-    background: #EAEAEA;
+    /* background: #EAEAEA; */
     border-radius: 0px;
     border: none;
 }
@@ -2461,7 +2461,7 @@ h5 {
     width: 960px;
     margin-top: 45px;
     padding: 10px;
-    background-color: #EAEAEA;
+   /*background-color: #EAEAEA;*/
     border-radius: 5px 5px 5px 5px;
 }
 
@@ -7390,8 +7390,7 @@ a.list-group-item {
 .store_grid_box {
     padding: 5px;
     position: relative;
-    margin-bottom: 10px;
-    height: 90px;
+    margin-bottom: 15px;
 }
 
 .store_grid_box .left_side_box {
@@ -8353,7 +8352,7 @@ a.list-group-item {
 .store_grid_box .list_store_item2 {
     display: block;
     position: relative;
-    padding: 25px 15px;
+    padding: 20px 10px;
     background: #FF0000;
     font-size: 17px;
 }

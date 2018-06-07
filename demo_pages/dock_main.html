@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Teacher Dashboard</title>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/admin.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery-2.1.0.js"></script>
+    <script src="js/common-script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajaxupload.3.5.js"></script>
+    <link href="../main.css" rel="stylesheet">
+    <link href="../fancybox/rupee.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <style type="text/css">
+        .circular {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: #999999 2px solid !important;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+        }
+
+        div#container {
+            width: 200px;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            background: #000;
+            border: 1px solid #1a1a1a;
+        }
+
+        /* HOVER STYLES */
+
+        div#pop-up {
+            display: none;
+            position: absolute;
+            width: 200px;
+            padding: 10px;
+            background: #eeeeee;
+            color: #000000;
+            border: 1px solid #BBBBBB;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            font-size: 90%;
+        }
+    </style>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="../../Home/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script language="javascript" type="text/javascript" src="../../Home/fancybox/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" type="text/css" href="../../Home/fancybox/jquery.fancybox-1.3.4.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.pop2").fancybox({
+                'overlayColor': '#000',
+                'overlayOpacity': 0.9
+            });
+            $("a.pop").fancybox({
+                'type': 'iframe',
+                'autoScale': true,
+                'autoDimensions': true,
+                'fitToView': true,
+            });
+            $("a.submit_verdict").fancybox({
+                'type': 'iframe',
+                'width': 550,
+                'height': 520,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_notification_message").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 600,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.message_display").fancybox({
+                'type': 'iframe',
+                'width': '300',
+                'height': '300',
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.teacher_login_form2").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 535,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.teacher_login_form").fancybox({
+                'type': 'iframe',
+                'width': 700,
+                'height': 380,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_notification_message1").fancybox({
+                'type': 'iframe',
+                'width': 550,
+                'height': 600,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_check").fancybox({
+                'type': 'iframe',
+                'width': 1000,
+                'height': 700,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+            $("a.view_check2").fancybox({
+                'type': 'iframe',
+                'width': 1000,
+                'height': 500,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
+
+        });
+        $(document).ready(function () {
+            $('#login-trigger').click(function () {
+                $(this).next('#login-content').slideToggle();
+                $(this).toggleClass('active');
+                if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+                else $(this).find('span').html('&#x25BC;')
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        //window.history.forward(1);
+        //function noBack(){
+        //window.history.forward();
+        $('#user_image').hide();
+        $('#user_image').load(function () {
+            $('#user_image').show();
+        });
+    </script>
+</head>
+
+<body class="dark_theme" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+
+
+    <div class="navigationBar">
+        <div class="logoBox">
+            <a href="index.php">
+                <h1 class="logoBox-header">TES<span>T</span>UNE</h1>
+            </a>
+        </div>
+        <div class="menu-wrapper">
+            <!--  <h1>Menu</h1> -->
+            <i class="fas fa-bars" onClick="openNav()"></i>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+
+            <a href="edit_profile.php">
+                <i class="fas fa-angle-right"></i>Personal Profile</a>
+            <a href="assign_test_batch.php">
+                <i class="fas fa-angle-right"></i>Assign Test</a>
+            <a href="change_password.php">
+                <i class="fas fa-angle-right"></i>Change Password</a>
+            <a href="?q=logout">
+                <i class="fas fa-angle-right"></i>Logout</a>
+
+        </div>
+    </div>
+
+    <script language='javascript'>
+        var parent_page_url = window.location.pathname;
+
+        function selected_exam() {
+            var exam = $('#exam').val();
+            window.location = parent_page_url + '?exam_name=' + exam;
+        }
+
+        function exam_id(p) {
+            $('#exam_name').html(p);
+            $.fancybox.close();
+            window.location.reload();
+        }
+    </script>
+    <script language='javascript'>
+        function moddetail(p) {
+            $(function () {
+                var moveLeft = 20;
+                var moveDown = 10;
+                $('a.trigger').hover(function (e) {
+                    $('div#pop-up').html(p);
+                    $('div#pop-up').show();
+                }, function () {
+                    $('div#pop-up').hide();
+                });
+                $('a.trigger').mousemove(function (e) {
+                    $("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+                });
+            });
+        }
+    </script>
+    <a href="select_subject_id.php" class="pop" id="select_subject_id" name="select_subject_id"></a>
+    <script language='javascript'>
+        selected_subject();
+    </script>
+
+    <!--\\\\\\\ header end \\\\\\-->
+    <div class="inner">
+        <!--\\\\\\\ inner start \\\\\\-->
+        <!--\\\\\\\left_nav end \\\\\\-->
+        <div class="contentpanel" style="margin-bottom:30px;">
+            <!--\\\\\\\ contentpanel start\\\\\\-->
+            <div class="login_page">
+                <div class="registration" style="border-radius:5px 5px 5px 5px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <select class="form-control  border_none grey_bg_black_text" id="subject" name="subject" onchange="selected_subject()">
+                                    <option selected name="display_option" id="display_option" value="SB_1223_C1_12_Phy_0">Physics Class: 12</option>
+                                    <option value="SB_1223_C1_11_Phy_0">Physics Class: 11</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invoice" style="width:850px;">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="show_search" id="undocked" onclick="show_radio_sort('undocked')"> Show Undocked </label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="show_search" id="published" onclick="show_radio_sort('published')"> Show Published </label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="show_search" id="wip" onclick="show_radio_sort('wip')"> Show WIP </label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="show_search" id="show_all" onclick="show_radio_sort('show_all')"> Show All </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" id="search" name="search" class="form-control border_radius20" placeholder="Search" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-web ">
+                        <!-- style="overflow:auto; height:440px;" it can be put here  inside div to make the store scroll-->
+                        <div class="porlets-content">
+                            <section class="panel default blue_title h2" id="display_section" name="display_section">
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--\\\\\\\ container  end \\\\\\-->
+        </div>
+        <div class="container clear_both padding_fix grey_bg_black_text">
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block-web bottom_margin0 grey_bg_black_text">
+                            <section class="panel default blue_title h2 grey_bg_black_text bottom_margin0">
+                                <h4 class="content-header" style="color:#660000;">
+                                    <strong>Didn't Find Your Test</strong>
+                                </h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <input type="text" required placeholder="Type Subject/Section" name="subject" id="subject" class="form-control border_radius5">
+                                                <!-- <label>Subject</label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <input type="text" required placeholder="Type Topic" name="topic" id="topic" class="form-control border_radius5">
+                                                <input type="hidden" name="faculty_id" id="faculty_id" value="TC_1223_1">
+                                                <!-- <label>Topic</label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="panel-body">
+                                            <input type="submit" name="sub" id="sub" value="Submit" class="btn btn-danger btn-block bs" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!--/block-web-->
+                    </div>
+                    <!--/col-md-8-->
+                </div>
+                <!--\\\\\\\ container  end \\\\\\-->
+            </form>
+        </div>
+        <!--\\\\\\\ content panel end \\\\\\-->
+        <div class="footer">
+            <div class="footerInner">
+                <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+            crossorigin="anonymous">
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+    <!--\\\\\\\ inner end\\\\\\-->
+    </div>
+    <a href="#" class="message_display" id="buy_question" name="buy_question"></a>
+    <a href="#" class="message_display" id="proceed_question" name="proceed_question"></a>
+    <a href="#" class="message_display" id="wip_popup" name="wip_popup"></a>
+    <a href="#" class="message_display" id="published_popup" name="published_popup"></a>
+    <a href="#" id="sent_publish_popup" name="sent_publish_popup" class="message_display"></a>
+    <!-- footer section-->
+</body>
+
+</html>
+<script language="javascript">
+    function show_radio_sort(p) {
+        var subject_id = $('#subject').val();
+        var faculty_id = "TC_1223_1";
+        var search = p;
+        $.ajax({
+            type: 'POST',
+            url: 'filter_by_sort2.php?subject_id=' + subject_id + '&search=' + search + '&faculty_id=' +
+                faculty_id,
+            data: '',
+            beforeSend: function () {
+                $('#display_section').html('Loading...');
+            },
+            success: function (response) {
+                if (response == "Error") {
+                    alert("Error in the system. Please try it later.");
+                } else {
+                    // alert(response);
+                    $('#display_section').html(response);
+                    //  alert('#'+p+'-'+r);
+                    //  $('#'+p+'-'+r).attr('onclick','').unbind('click');
+                }
+            }
+        });
+    }
+
+    function proceed_question_buy(p, r) {
+        $('#proceed_question').attr('href', 'question_proceed_message.php?id=' + p + '&topic=' + r);
+        $('#proceed_question').trigger('click');
+    }
+
+    function confirm_question_buy(p) {
+        $('#buy_question').attr('href', 'buy_question.php?pt_id=' + p);
+        $('#buy_question').click();
+
+    }
+
+    $("#search").keyup(function (event) {
+        if (event.keyCode == 13) {
+            search_result();
+        }
+    });
+
+    function search_result() {
+        var search = $('#search').val();
+        var exam_id = $('#subject').val();
+        var faculty_id = "";
+        $.ajax({
+            type: 'POST',
+            url: 'filter_by_search.php?exam_id=' + exam_id + '&search=' + search + '&faculty_id=' + faculty_id,
+            data: '',
+            beforeSend: function () {
+                $('#display_section').html('Loading...');
+            },
+            success: function (response) {
+                if (response == "Error") {
+                    alert("Error in the system. Please try it later.");
+                } else {
+                    // alert(response);
+                    $('#display_section').html(response);
+                    // alert('#'+p+'-'+r);
+                    //  $('#'+p+'-'+r).attr('onclick','').unbind('click');
+                }
+            }
+        });
+    }
+
+    function selected_subject() {
+        var subject = $('#subject').val();
+        var subject_id = $('#subject').val();
+        if (subject != '') {
+            $.ajax({
+                type: 'POST',
+                url: 'filter_by_subject2.php?subject_id=' + subject_id + '&subject=' + subject,
+                data: '',
+                beforeSend: function () {
+                    $('#display_section').html('Loading...');
+                },
+                success: function (response) {
+                    if (response == "Error") {
+                        alert("Error in the system. Please try it later.");
+                    } else {
+                        $('#display_section').html(response);
+                        $('#show_all').attr('checked', 'checked');
+                    }
+                }
+            });
+        }
+    }
+
+    function selected_subject1() {
+        var subject = $('#subject').val();
+        var subject_id = $('#subject').val();
+        if (subject != '') {
+            $.ajax({
+                type: 'POST',
+                url: 'filter_by_subject.php?subject_id=' + subject_id + '&subject=' + subject,
+                data: '',
+                beforeSend: function () {
+                    $('#display_section').html('Loading...');
+                },
+                success: function (response) {
+                    if (response == "Error") {
+                        alert("Error in the system. Please try it later.");
+                    } else {
+                        $('#display_section').html(response);
+
+                        $('#show_all').attr('checked', 'checked');
+                        select_option();
+                        // alert('#'+p+'-'+r);
+                        //  $('#'+p+'-'+r).attr('onclick','').unbind('click');
+                    }
+                }
+            });
+        }
+    }
+
+    function select_option() {
+        $.ajax({
+            type: 'POST',
+            url: 'select_exam_list.php',
+            data: '',
+            beforeSend: function () {},
+            success: function (response) {
+                $('#subject').html(response);
+            }
+        });
+    }
+
+
+    function add_to_dashboard(p, q, r) {
+        /* $.ajax({
+			  type: 'POST',
+			  url: 'check_practice_test.php?pt_id='+p+'&faculty_id='+q,
+			  data: '',
+			  beforeSend: function() {
+			  },
+			  success: function(response){
+                                 if(response == "Error")
+				  {
+				        alert("Error in the system. Please try it later.");
+				   }
+				 else  
+		                    {
+                                       alert(response);
+                                       // alert('#'+p+'-'+r);
+                                    //  $('#'+p+'-'+r).attr('onclick','').unbind('click');
+				   } 
+                             }
+			 });  */
+    }
+
+    function custom_question() {
+        var subject_id = $('#subject').val();
+        var faculty_id = "TC_1223_1";
+        var custom_question_text = $('#custom_question_text').val();
+        if (custom_question_text != '') {
+            $.ajax({
+                type: 'POST',
+                url: 'custom_question.php?exam_id=' + exam_id + '&faculty_id=' + faculty_id +
+                    '&custom_question_text=' + custom_question_text,
+                data: '',
+                beforeSend: function () {},
+                success: function (response) {
+                    if (response == "Error") {
+                        alert("Error in the system. Please try it later.");
+                    } else {
+                        $('#custom_form').attr('href', 'custom_question_form.php?id=' + response);
+                        $('#custom_form').click();
+                    }
+                }
+            });
+        } else {
+            alert("Field can not to empty");
+        }
+    }
+
+    function subject_id(p) {
+        $('#subject_id').html(p);
+        window.location.reload();
+    }
+
+    function selected_exam() {
+        var exam = $('#exam').val();
+        window.location = 'teacher_foundry.php?exam_name=' + exam;
+    }
+
+    function wip_click() {
+        $('#wip_popup').attr('href', 'wip_message.php');
+        $('#wip_popup').trigger('click');
+    }
+
+    function sent_publish_click() {
+        $('#sent_publish_popup').attr('href', 'sent_publish_message.php');
+        $('#sent_publish_popup').trigger('click');
+    }
+
+    function published_click() {
+        $('#published_popup').attr('href', 'published_message.php');
+        $('#published_popup').trigger('click');
+    }
+</script>
+
+<script language='javascript'>
+    selected_subject();
+</script>

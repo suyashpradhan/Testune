@@ -12,6 +12,9 @@
 
 body {
     overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .navigationBar {
@@ -1328,11 +1331,15 @@ body {
 
 /***********FOOTER CSS************/
 
+.clearfix-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
 .footer {
     background-color: #1E252B;
     margin-bottom: 0;
     width: 100%;
-    position: fixed;
 }
 
 /* .footer {
@@ -2990,8 +2997,9 @@ body {
 
 .choose-subject-wrapper {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 30px 0 10px 0;
 }
 
 .choose-subject {
@@ -3009,7 +3017,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    height: 50px;
 }
 
 .dock-first-row li {
@@ -3018,15 +3025,15 @@ body {
 }
 
 .dock-item {
-   flex: 1;
-   margin-top: 10px;
+    flex: 1;
+    margin-top: 10px;
 }
 
 .dock-item-last {
-    flex-basis:  1;
+    flex-basis: 1;
 }
 
-.search-box{
+.search-box {
     width: 300px;
     padding: 5px 10px;
     border-radius: 100px;
@@ -3037,14 +3044,134 @@ body {
     letter-spacing: 1px;
 }
 
-.dock-item a{
+.dock-item a {
     color: #ED4933;
     text-decoration: none;
     font-size: 20px;
     letter-spacing: 1px;
 }
 
-.dock-item a:hover{
+.dock-item a:hover {
     color: #000;
     text-decoration: none;
+}
+
+@media screen and (max-width:526px) {
+    .dock-first-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+}
+
+.test-finder h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+}
+
+.test-finder-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    margin: 15px 0;
+}
+
+.subject-box {
+    flex-basis: 250px;
+    margin-right: 20px;
+    padding: 8px 10px;
+    text-align: center;
+    border: 1px solid #00897B;
+}
+
+.topic-box {
+    flex-basis: 500px;
+    margin-right: 20px;
+    padding: 8px 10px;
+    text-align: center;
+    border: 1px solid #00897B;
+}
+
+.test-finder-button {
+    flex: 1;
+    padding: 8px 10px;
+    background-color: #218838;
+    border: 1px solid #218838;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+/*****Account Activation Page*****/
+
+.main-section-wrapper {
+    width: auto;
+    height: 200px;
+    background: #FFF;
+    margin: 100px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column wrap;
+}
+
+.main-section-wrapper h1 {
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.main-section-wrapper h3 {
+    font-size: 20px;
+    margin: 5px 0 10px 0;
+    padding-left: 20px;
+    letter-spacing: 1px;
+}
+
+.main-section-link {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    padding-left: 20px;
+    color: #ED4933;
+    letter-spacing: 1px;
+}
+
+.main-section-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.main-box {
+    position: relative;
+}
+
+.main-box {
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.main-box:before,
+.main-box:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.main-box:after {
+    right: 10px;
+    left: auto;
+    transform: skew(8deg) rotate(3deg);
 }
