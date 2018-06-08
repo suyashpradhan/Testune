@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/admin.css">
 </head>
 
 <body>
     <div class="navigationBar">
         <div class="logoBox">
-            <h1 class="logoBox-header">TES<span>T</span>UNE</h1>
+            <h1 class="logoBox-header">TES
+                <span>T</span>UNE</h1>
         </div>
         <div class="menu-wrapper">
             <i class="fas fa-bars" onclick="openNav()"></i>
@@ -40,15 +42,19 @@
         <div class="main-dock-wrapper">
             <ul class="dock-first-row">
                 <li class="dock-item">
+                    <input type="radio" name="" id="">
                     <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show Undocked</a>
                 </li>
                 <li class="dock-item">
+                    <input type="radio" name="" id="">
                     <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show Published</a>
                 </li>
                 <li class="dock-item">
+                    <input type="radio" name="" id="">
                     <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show In Progress</a>
                 </li>
                 <li class="dock-item">
+                    <input type="radio" name="" id="">
                     <a href="" id="undocked" onclick="show_radio_sort('undocked')">Show All</a>
                 </li>
                 <li class="dock-item-last">
@@ -56,32 +62,102 @@
                 </li>
             </ul>
         </div>
-        <div class="test-finder">
-            <h1>Didn't Find Your Test</h1>
-            <form action="#" class="test-finder-form">
-                <input type="text" name="" id="" class="subject-box" placeholder="Type Subject/Topic">
-                <input type="text" name="" id="" class="topic-box" placeholder="Type Topic">
-                <button class="test-finder-button">Submit</button>
-            </form>
+        <div class="block-web ">
+            <!-- style="overflow:auto; height:440px;" it can be put here  inside div to make the store scroll-->
+            <div class="porlets-content">
+                <section class="panel default blue_title h2" id="display_section" name="display_section">
+                    <div class="block-web bottom_margin0">
+                        <div class="panel panel-default">
+                            <h5 style="font-size: 28px;letter-spacing: 1px;">Section Exam</h5>
+                            <section class="panel default blue_title h2">
+                                <div class="primary-section-wrapper primary-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="store_grid_box">
+                                                <div class="left_side_box">
+                                                    <span title="Isolation">
+                                                        <div class="list_store_item2 aqua_bg_grey_text">Isolation</div>
+                                                    </span>
+                                                </div>
+                                                <div class="right_side_box">
+                                                    <button type="button" class="btn btn-success btn-block" onclick="published_click();" style="height: 64px;">Published</button>
+                                                </div>
+                                            </div>
+                                            <div class="store_grid_box">
+                                                <div class="left_side_box">
+                                                    <span title="Atoms">
+                                                        <div class="list_store_item2 aqua_bg_grey_text">Atoms</div>
+                                                    </span>
+                                                </div>
+                                                <div class="right_side_box">
+                                                    <button type="button" class="btn btn-success btn-block" onclick="published_click();" style="height: 64px;">Published</button>
+                                                </div>
+                                            </div>
+                                            <div class="store_grid_box">
+                                                <div class="left_side_box">
+                                                    <span title="Wave Optics">
+                                                        <div class="list_store_item2 aqua_bg_grey_text">Wave Optics</div>
+                                                    </span>
+                                                </div>
+                                                <div class="right_side_box">
+                                                    <button type="button" class="btn btn-block btn-warning" onclick="wip_click();" style="height: 64px;">WIP</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="store_grid_box">
+                                                <div class="left_side_box">
+                                                    <span title="Ray optics">
+                                                        <div class="list_store_item2 aqua_bg_grey_text">Ray optics</div>
+                                                    </span>
+                                                </div>
+                                                <div class="right_side_box">
+                                                    <button type="button" class="btn btn-success btn-block" onclick="published_click();" style="height: 64px;">Published</button>
+                                                </div>
+                                            </div>
+                                            <div class="store_grid_box">
+                                                <div class="left_side_box">
+                                                    <span title="Nuclear">
+                                                        <div class="list_store_item2 aqua_bg_grey_text">Nuclear</div>
+                                                    </span>
+                                                </div>
+                                                <div class="right_side_box">
+                                                    <button type="button" class="btn btn-success btn-block" onclick="published_click();" style="height: 64px;">Published</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </section>
+                            </div>
+                        </div>
+                </section>
+                </div>
+            </div>
+            <div class="test-finder">
+                <h1>Didn't Find Your Test</h1>
+                <form action="#" class="test-finder-form">
+                    <input type="text" class="subject-box" placeholder="Type Subject/Topic">
+                    <input type="text" class="topic-box" placeholder="Type Topic">
+                    <button class="test-finder-button">Submit</button>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <div class="footer">
-        <div class="footerInner">
-            <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+        <div class="footer">
+            <div class="footerInner">
+                <h1>TESTUNE TECHNOLOGY PVT LTD</h1>
+            </div>
         </div>
-    </div>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
-        crossorigin="anonymous">
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+            crossorigin="anonymous">
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
 </body>
 
 </html>

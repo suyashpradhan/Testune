@@ -1302,13 +1302,11 @@ img {
 }
 
 .theme_color {
-    color: #f35958;
-     !important;
+    color: #f35958 !important;
 }
 
 .theme_border {
-    border-color: #f35958;
-     !important;
+    border-color: #f35958 !important;
 }
 
 .breadcrumb_admin {
@@ -7244,8 +7242,10 @@ a.list-group-item {
 }
 
 .aqua_bg_grey_text {
-    background-color: #A6DCE3 !important;
-    color: #666666 !important;
+    background-color: #bdbdbd !important;
+    color: #000 !important;
+    font-size: 20px !important;
+    letter-spacing: 2px;
 }
 
 .black_bg_grey_text {
@@ -7388,20 +7388,20 @@ a.list-group-item {
 /* Store grid */
 
 .store_grid_box {
-    padding: 5px;
+    padding: 20px 20px 0 20px ;
     position: relative;
     margin-bottom: 15px;
 }
 
 .store_grid_box .left_side_box {
-    margin: 0px 0px 10px 0px;
-    width: 74%;
+    margin: 0px 0px 20px 0px;
+    width: 80%;
     float: left;
 }
 
 .store_grid_box .right_side_box {
     margin: 0px 0px 10px 0px;
-    width: 26%;
+    width: 20%;
     float: right;
 }
 
@@ -8954,4 +8954,8 @@ a.list-group-item {
     .header-middle {
         width: 636px;
     }
+}
+
+.btn-new{
+    height: 60px;
 }

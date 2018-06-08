@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<style>
+    /* The container */
+
+    .my-radio {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+
+    .my-radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    .my-radio:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    .my-radio input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .my-radio input:checked~.checkmark:after {
+        display: block;
+    }
+
+    .my-radio .checkmark:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+</style>
+
+<body>
+    <label class="my-radio">Show Undocked
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <label class="my-radio">Show Published
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <label class="my-radio">Show In Progress
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <label class="my-radio">Show All
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+
+</body>
+
+</html>
